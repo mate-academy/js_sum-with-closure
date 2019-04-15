@@ -2,7 +2,7 @@
   "name": "sum-with-closure",
   "version": "1.0.0",
   "description": "Sum with a closure",
-  "main": "src/getSumWithClosure.js",
+  "main": "src/sum.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
