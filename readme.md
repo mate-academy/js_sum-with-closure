@@ -1,4 +1,4 @@
-# Boilerplate for JS tasks
+# Sum with a closure
 
 **Read the guideline before start**
 

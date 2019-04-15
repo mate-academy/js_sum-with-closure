@@ -1,8 +1,8 @@
 {
-  "name": "js-task-boilerplate",
+  "name": "sum-with-closure",
   "version": "1.0.0",
-  "description": "js task boilerplate",
-  "main": "src/sum.js",
+  "description": "Sum with a closure",
+  "main": "src/getSumWithClosure.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
