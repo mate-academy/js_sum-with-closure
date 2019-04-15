@@ -7,8 +7,9 @@
  * mistake. The implementation requires solution with closures.
  *
  * sum(1)(2) === 3
- * sum(1)(11) === 12
- * sum(1)(-1) === 0
+ * sum(2)(11) === 13
+ * sum(5)(-5) === 0
+ * sum(-10)(-1) === -11
  *
  * @param {number} a
  *
