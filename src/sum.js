@@ -3,19 +3,20 @@
 /**
  * Implement sum function:
  *
- * Function takes 2 numbers and returns it's sum
+ * Function works with next pattern: sum(a)(b) === a + b. Double braces is not a
+ * mistake. The implementation requires solution with closures.
  *
- * sum(1, 2) === 3
- * sum(1, 11) === 12
+ * sum(1)(2) === 3
+ * sum(2)(11) === 13
+ * sum(5)(-5) === 0
+ * sum(-10)(-1) === -11
  *
  * @param {number} a
- * @param {number} b
  *
- * @return {number}
+ * @return {function}
  */
-function sum(a, b) {
+function sum(a) {
   // write code here
-  return a + b;
 }
 
 module.exports = sum;
