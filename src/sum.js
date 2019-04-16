@@ -15,8 +15,7 @@
  *
  * @return {function}
  */
-function sum(input) {
-  let a = input;
+function sum(a) {
   return function result(b) {
     return b + a;
   };
