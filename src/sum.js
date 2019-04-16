@@ -16,10 +16,8 @@
  * @return {function}
  */
 function sum(a) {
-  let sum = 0;
-  return function(b) {
-    sum += a + b;
-    return sum;
+  return (b) => {
+    return a + b;
   };
 }
 
