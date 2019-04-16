@@ -15,11 +15,11 @@
  *
  * @return {function}
  */
-function sum(numOne) {
-  let func = function(numTwo) {
-    return numOne + numTwo;
+function sum(numberOne) {
+  const sumOfNumbers = function(numberTwo) {
+    return numberOne + numberTwo;
   };
-  return func;
+  return sumOfNumbers;
 }
 
 module.exports = sum;
