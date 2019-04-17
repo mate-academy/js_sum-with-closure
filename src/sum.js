@@ -16,7 +16,8 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  return function(b) {
+    return a + b;
+  };
 }
-
 module.exports = sum;
