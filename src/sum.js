@@ -17,6 +17,9 @@
  */
 function sum(a) {
   // write code here
+  return (item) => {
+    return a + item;
+  };
 }
 
 module.exports = sum;
