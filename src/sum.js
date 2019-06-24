@@ -16,7 +16,10 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  return function(b) {
+    const result = a + b;
+    return result;
+  };
 }
 
 module.exports = sum;
