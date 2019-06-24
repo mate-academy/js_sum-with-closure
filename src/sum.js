@@ -15,8 +15,14 @@
  *
  * @return {function}
  */
-function sum(a) {
-  // write code here
-}
+
+// short writing style
+// const sum = a => b => a + b;
+
+const sum = a => {
+  return b => {
+    return a + b;
+  };
+};
 
 module.exports = sum;
