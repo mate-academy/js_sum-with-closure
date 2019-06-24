@@ -17,6 +17,11 @@
  */
 function sum(a) {
   // write code here
+  let totalsum = a;
+  return function(b) {
+    totalsum += b;
+    return totalsum;
+  };
 }
 
 module.exports = sum;
