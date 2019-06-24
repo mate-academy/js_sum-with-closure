@@ -16,7 +16,11 @@
  * @return {function}
  */
 function sum(a) {
-  // write code here
+  function secondElement(b) {
+    return a + b;
+  }
+
+  return secondElement;
 }
 
 module.exports = sum;
