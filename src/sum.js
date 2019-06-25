@@ -17,6 +17,14 @@
  */
 function sum(a) {
   // write code here
+  let result;
+  const inner = (b) => {
+    result = a + b;
+
+    return result;
+  };
+
+  return inner;
 }
 
 module.exports = sum;
