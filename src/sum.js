@@ -17,6 +17,14 @@
  */
 function sum(a) {
   // write code here
+  const firstArgument = a;
+
+  function device(b) {
+    const secondArgument = b;
+    return firstArgument + secondArgument;
+  }
+
+  return device;
 }
 
 module.exports = sum;
