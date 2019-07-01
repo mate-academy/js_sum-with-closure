@@ -17,6 +17,9 @@
  */
 function sum(a) {
   // write code here
+  return function sumNambers(b) {
+    return (a + b);
+  };
 }
 
 module.exports = sum;
