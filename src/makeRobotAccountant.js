@@ -5,8 +5,20 @@
  * @return {function}
  */
 
-function makeRobotAccountant() {
-  // write code here
+function makeRobotAccountant(a) {
+  let counter = 0;
+
+  return function(num1) {
+    counter += 1;
+
+    return function(num2) {
+      if (counter > 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
+      }
+
+      return num1 + num2;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
