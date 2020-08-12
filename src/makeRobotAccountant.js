@@ -7,14 +7,14 @@
 
 function makeRobotAccountant() {
   // write code here
-  let counts = 0;
+  let counter = 0;
 
-  return function(first) {
-    return function(second) {
-      counts++;
+  return function(firstNum) {
+    return function(secondNum) {
+      counter++;
 
-      if (counts < 4 || counts % 2 === 1) {
-        return first + second;
+      if (counter < 4 || counter % 2 === 1) {
+        return firstNum + secondNum;
       } else {
         return 'Bzzz... Error!';
       };
