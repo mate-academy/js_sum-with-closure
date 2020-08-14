@@ -9,7 +9,6 @@ function makeRobotAccountant() {
   let startCount = 0;
 
   return (x) => {
-
     return (y) => {
       startCount++;
 
