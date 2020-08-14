@@ -2,6 +2,7 @@
 
 const makeRobotAccountant = require('./makeRobotAccountant');
 
+// 1
 test('The call result of makeRobotAccountant should be function', () => {
   const getSum = makeRobotAccountant();
 
@@ -9,6 +10,7 @@ test('The call result of makeRobotAccountant should be function', () => {
     .toBe('function');
 });
 
+// 2
 test('The call result of getSum(5)(6) should be a number', () => {
   const getSum = makeRobotAccountant();
 
@@ -18,6 +20,7 @@ test('The call result of getSum(5)(6) should be a number', () => {
     .toBe('number');
 });
 
+// 3
 test('The result for the first three calls should be a number', () => {
   const getSum = makeRobotAccountant();
 
@@ -35,6 +38,7 @@ test('The result for the first three calls should be a number', () => {
     .toBe('number');
 });
 
+// 4
 test('Starting from fourth call, '
   + 'it should return error message for even calls', () => {
   const getSum = makeRobotAccountant();
@@ -50,6 +54,7 @@ test('Starting from fourth call, '
     .toBe(errorMessage);
 });
 
+// 5
 test('Starting from fourth call, '
   + 'it should works only for odd calls', () => {
   const getSum = makeRobotAccountant();
