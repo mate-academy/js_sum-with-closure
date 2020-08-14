@@ -12,11 +12,9 @@ function makeRobotAccountant() {
     count++;
 
     return (b) => { // ( getSum(5) )(6)
-      if (count <= 3) { // first three works everytime
+      if (count <= 3 || count % 2) { // first three and odd works
         return a + b;
-      } else if (count % 2) { // odd (НЕпарні) works correct
-        return a + b;
-      } else { // >3 and even works not correct
+      } else {
         return 'Bzzz... Error!';
       }
     };
