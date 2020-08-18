@@ -10,13 +10,11 @@ function makeRobotAccountant() {
 
   return (a) => {
     return (b) => {
-      if (i < 3 || i / 2 === Math.floor(i / 2)) {
-        i++;
+      i++;
 
+      if (i - 1 < 3 || (i - 1) % 2 === 0) {
         return a + b;
       } else {
-        i++;
-
         return 'Bzzz... Error!';
       }
     };
