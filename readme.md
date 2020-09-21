@@ -10,7 +10,7 @@ const getSum = makeRobotAccountant();
 getSum(5)(6) === 11;
 getSum(1)(3) === 4;
 getSum(6)(6) === 12;
-getSum(55)(16) === 'Bzzz... Error!';
+getSum(55)(16) === `'Bzzz... Error!'`;
 getSum(55)(16) === 71;
 getSum(55)(17) === 'Bzzz... Error!';
 getSum(5)(17) === 22;
