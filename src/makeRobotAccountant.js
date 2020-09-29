@@ -8,11 +8,11 @@
 function makeRobotAccountant() {
   let iterationRound = 0;
 
-  const firstPart = (n) => {
-    let sum = n;
+  const adder = (startValue) => {
+    let sum = startValue;
 
-    const secondPart = (m) => {
-      sum += m;
+    const added = (addedValue) => {
+      sum += addedValue;
       iterationRound++;
 
       if (iterationRound > 3 && iterationRound % 2 === 0) {
@@ -22,10 +22,10 @@ function makeRobotAccountant() {
       return sum;
     };
 
-    return secondPart;
+    return added;
   };
 
-  return firstPart;
+  return adder;
 }
 
 module.exports = makeRobotAccountant;
