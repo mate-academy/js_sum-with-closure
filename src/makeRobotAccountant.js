@@ -6,15 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  let usageCaunt = 0;
+  let caunter = 0;
 
   const addNumber = function(numberA) {
     const savedNumber = numberA;
 
-    usageCaunt++;
+    caunter++;
 
     return (numberB) => {
-      if (usageCaunt > 3 && usageCaunt % 2 === 0) {
+      if (caunter > 3 && caunter % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
