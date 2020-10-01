@@ -8,12 +8,14 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const sumOfNums = (num1) => {
-    return (num2) => {
-      count++;
+  const sumOfNums = (num1) => (num2) => {
+    count++;
 
-      return (count > 2 && count % 2 === 0) ? 'Bzzz... Error!' : num1 + num2;
-    };
+    if (count > 2 && count % 2 === 0) {
+      return 'Bzzz... Error!';
+    }
+
+    return num1 + num2;
   };
 
   return sumOfNums;
