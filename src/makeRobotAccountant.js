@@ -12,7 +12,9 @@ function makeRobotAccountant() {
     return function(y) {
       counter++;
 
-      return counter === 2 || counter % 2 !== 0 ? x + y : 'Bzzz... Error!';
+      return counter === 2 || counter % 2 !== 0
+        ? x + y
+        : 'Bzzz... Error!';
     };
   };
 
