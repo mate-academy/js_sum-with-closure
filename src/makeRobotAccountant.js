@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccounterant() {
+function makeRobotAccountant() {
   let counter = 0;
 
   function sumOfNumbers(x) {
@@ -19,4 +19,4 @@ function makeRobotAccounterant() {
   return sumOfNumbers;
 }
 
-module.exports = makeRobotAccounterant;
+module.exports = makeRobotAccountant;
