@@ -8,12 +8,12 @@
 function makeRobotAccountant() {
   let callsCount = 0;
 
-  return (numA) => {
-    callsCount++;
+  return (numberA) => {
+    return (numberB) => {
+      callsCount++;
 
-    return (numB) => {
       return callsCount < 3 || callsCount % 2
-        ? numA + numB
+        ? numberA + numberB
         : 'Bzzz... Error!';
     };
   };
