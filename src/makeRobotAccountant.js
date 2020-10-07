@@ -6,10 +6,11 @@ function makeRobotAccountant() {
   return first => {
     count++;
 
-    return second => count > 3
-    && count % 2 === 0
-      ? 'Bzzz... Error!'
-      : first + second;
+    return second => {
+      return count > 3 && count % 2 === 0
+        ? 'Bzzz... Error!'
+        : first + second;
+    };
   };
 }
 
