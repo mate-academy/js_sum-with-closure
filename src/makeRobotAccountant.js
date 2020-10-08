@@ -8,24 +8,17 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  const firstAdd = (firstValue) => {
-    let result = firstValue;
-
-    const secondAdd = (secondValue) => {
-      result += secondValue;
+  return (firstValue) => {
+    return (secondValue) => {
       counter++;
 
       if (counter > 3 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return result;
+      return firstValue + secondValue;
     };
-
-    return secondAdd;
   };
-
-  return firstAdd;
 }
 
 module.exports = makeRobotAccountant;
