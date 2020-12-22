@@ -6,19 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let countCalls = 0;
+  let countCalls = 1;
 
   return function(firstArg) {
     return function(secondArg) {
-      if (countCalls >= 3 && countCalls % 2 === 1) {
-        countCalls++;
+      countCalls++;
 
+      if (countCalls > 3 && countCalls % 2 === 1) {
         return 'Bzzz... Error!';
-      } else {
-        countCalls++;
-
-        return firstArg + secondArg;
       }
+
+      return firstArg + secondArg;
     };
   };
 }
