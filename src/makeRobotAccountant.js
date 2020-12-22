@@ -8,15 +8,13 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return function(first) {
-    return function(second) {
-      if (counter >= 3 && counter % 2 > 0) {
-        counter++;
+  return first => {
+    return second => {
+      counter++;
 
+      if (counter >= 3 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       } else {
-        counter++;
-
         return first + second;
       }
     };
