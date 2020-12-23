@@ -16,7 +16,7 @@ function makeRobotAccountant() {
         return firstNumber + secondNumber;
       }
 
-      count = 2;
+      count = 1;
 
       return 'Bzzz... Error!';
     };
