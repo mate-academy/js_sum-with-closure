@@ -7,7 +7,6 @@
 
 function makeRobotAccountant() {
   let step = 0;
-  let stepAllowed = 3;
 
   const getFirstArguments = function(a) {
     const getNewArguments = function(b) {
@@ -15,11 +14,10 @@ function makeRobotAccountant() {
 
       const sum = a + b;
 
-      if (step <= stepAllowed) {
+      if (step <= 3 || step % 2 !== 0) {
         return sum;
       } else {
         step = 0;
-        stepAllowed = 1;
 
         return 'Bzzz... Error!';
       }
