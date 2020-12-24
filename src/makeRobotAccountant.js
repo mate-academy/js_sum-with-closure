@@ -9,9 +9,9 @@ function makeRobotAccountant() {
   let count = 0;
 
   return (numA) => {
-    count++;
-
     return (numB) => {
+      count++;
+
       const result = numA + numB;
 
       if (count > 3 && count % 2 === 0) {
