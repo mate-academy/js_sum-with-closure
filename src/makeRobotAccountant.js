@@ -14,13 +14,15 @@ function makeRobotAccountant() {
         count++;
 
         return x + y;
-      } else if (count % 2 === 0) {
+      }
+
+      if (count % 2 === 0) {
         count++;
 
         return `Bzzz... Error!`;
-      } else {
-        return x + y;
       }
+
+      return x + y;
     };
   };
 }
