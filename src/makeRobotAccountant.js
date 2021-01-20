@@ -10,13 +10,7 @@ function makeRobotAccountant() {
 
   return (value1) => {
     return (value2) => {
-      if (calls < 3) {
-        calls++;
-
-        return value1 + value2;
-      }
-
-      if (calls % 2 === 0) {
+      if (calls % 2 === 0 || calls < 3) {
         calls++;
 
         return value1 + value2;
