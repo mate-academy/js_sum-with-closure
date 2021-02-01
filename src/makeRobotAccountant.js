@@ -13,7 +13,7 @@ function makeRobotAccountant() {
     return (y) => {
       accum++;
 
-      return accum % 2 === 0 && accum !== 2
+      return accum % 2 === 0 && accum > 3
         ? 'Bzzz... Error!'
         : x + y;
     };
