@@ -6,7 +6,22 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let counter = 0;
+
+  return (firstValue) => {
+    counter++;
+
+    return (secondValue) => {
+      const sum = firstValue + secondValue;
+      const errorMessage = 'Bzzz... Error!';
+
+      if (counter % 2 === 0 && counter >= 3) {
+        return errorMessage;
+      }
+
+      return sum;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
