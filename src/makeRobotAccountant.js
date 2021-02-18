@@ -15,9 +15,7 @@ function makeRobotAccountant() {
       const sum = firstValue + secondValue;
       const errorMessage = 'Bzzz... Error!';
 
-      if (counter % 2 === 0
-        && (counter >= 3 && typeof sum === 'number')
-      ) {
+      if (counter % 2 === 0 && counter >= 3) {
         return errorMessage;
       }
 
