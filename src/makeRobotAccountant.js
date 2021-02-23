@@ -3,15 +3,15 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return (x) => {
-    return (y) => {
+  return (firstNumber) => {
+    return (secondNumber) => {
       counter++;
 
       if (counter > 3 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return x + y;
+      return firstNumber + secondNumber;
     };
   };
 }
