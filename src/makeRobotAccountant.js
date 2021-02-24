@@ -6,15 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  let callFunction = 0;
+  let functionCalls = 0;
 
   return (firstNumber) => {
-    callFunction++;
+    functionCalls++;
 
     return (secondNumber) => {
-      const isEven = callFunction % 2 === 0;
+      const isEven = functionCalls % 2 === 0;
 
-      if (callFunction > 3 && isEven) {
+      if (functionCalls > 3 && isEven) {
         return 'Bzzz... Error!';
       }
 
