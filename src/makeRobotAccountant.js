@@ -9,21 +9,17 @@ function makeRobotAccountant() {
   let count = 0;
 
   function sum(x) {
-    count++;
-
-    function newSum(y) {
-      if (count <= 3) {
-        return x + y;
-      }
+    function sumClosure(y) {
+      count++;
 
       if ((count > 3) && (count % 2 === 0)) {
         return 'Bzzz... Error!';
-      } else {
-        return x + y;
       }
+
+      return x + y;
     }
 
-    return newSum;
+    return sumClosure;
   }
 
   return sum;
