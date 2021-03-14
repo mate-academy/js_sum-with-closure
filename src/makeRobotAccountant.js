@@ -21,6 +21,4 @@ function makeRobotAccountant() {
   };
 }
 
-makeRobotAccountant.errorMessage = () => 'Bzzz... Error!';
-
 module.exports = makeRobotAccountant;
