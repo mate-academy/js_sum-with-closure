@@ -10,13 +10,9 @@ function makeRobotAccountant() {
 
   const add = (x) => {
     return function(y) {
-      let result;
-
-      if (counter < 3) {
-        result = x + y;
-      } else {
-        result = counter % 2 === 1 ? 'Bzzz... Error!' : x + y;
-      }
+      const result = (counter < 3 || counter % 2 === 0)
+        ? x + y
+        : 'Bzzz... Error!';
 
       counter++;
 
