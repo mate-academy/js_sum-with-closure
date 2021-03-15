@@ -7,6 +7,7 @@
 
 function makeRobotAccountant() {
   let operationsAmount = 0;
+
   const getSum = (x) => {
     return (y) => {
       operationsAmount++;
