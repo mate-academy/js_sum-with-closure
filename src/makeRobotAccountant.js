@@ -15,7 +15,7 @@ function makeRobotAccountant() {
         count++;
 
         return errorMessage;
-      } else if ((4 + (count % 2) > 4 || count < 4)) {
+      } else if (count % 2 !== 0 || count < 4) {
         count++;
 
         return a + b;
