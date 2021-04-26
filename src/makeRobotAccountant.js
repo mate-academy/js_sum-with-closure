@@ -6,7 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let count = 1;
+
+  return (el1) => {
+    count++;
+
+    return function(el2) {
+      return count > 4 && count & 1 ? 'Bzzz... Error!' : el1 + el2;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
