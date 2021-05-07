@@ -7,17 +7,17 @@
 
 function makeRobotAccountant() {
   // write code here
-  let count = 4;
+  let count = 0;
 
   const sum = function(x) {
-    if (count === 0) {
+    if (count === 4) {
       count = 2;
     }
 
     return function(y) {
-      count--;
+      count++;
 
-      return count === 0
+      return count === 4
         ? 'Bzzz... Error!'
         : x + y;
     };
