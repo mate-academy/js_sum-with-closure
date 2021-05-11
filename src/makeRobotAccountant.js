@@ -6,25 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  const nums = [];
+  let count = 0;
 
-  const additor = function(num1) {
-    const innerAdditor = function(num2) {
-      const sum = num1 + num2;
+  return function(firstNum) {
+    return function(secondNum) {
+      const sum = firstNum + secondNum;
 
-      nums.push(sum);
+      count++;
 
-      if (nums.length >= 4 && nums.length % 2 === 0) {
+      if (count >= 4 && count % 2 === 0) {
         return 'Bzzz... Error!';
       } else {
         return sum;
       }
     };
-
-    return innerAdditor;
   };
-
-  return additor;
 }
 
 module.exports = makeRobotAccountant;
