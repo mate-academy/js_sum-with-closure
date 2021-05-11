@@ -8,11 +8,11 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (num1) => {
+  return (x) => {
     count++;
 
-    return (num2) => (count < 4 || count % 2 !== 0)
-      ? num1 + num2
+    return (y) => (count < 4 || count % 2 !== 0)
+      ? x + y
       : 'Bzzz... Error!';
   };
 };
