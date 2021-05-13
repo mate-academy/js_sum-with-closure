@@ -13,7 +13,8 @@ function makeRobotAccountant() {
       count += 1;
 
       const result = count > 3 && count % 2 === 0
-        ? `Bzzz... Error!` : x + y;
+        ? `Bzzz... Error!` 
+        : x + y;
 
       return result;
     };
