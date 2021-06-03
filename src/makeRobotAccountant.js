@@ -12,7 +12,7 @@ function makeRobotAccountant() {
   return function(x) {
     limit++;
 
-    if (limit <= 3 && limit % 2 !== 0) {
+    if (limit <= 3 || limit % 2 !== 0) {
       return y => x + y;
     }
 
