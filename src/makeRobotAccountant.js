@@ -13,11 +13,9 @@ function makeRobotAccountant() {
     return function(numB) {
       callsCount++;
 
-      return (callsCount > 3 && callsCount % 2 === 0) ? (
-        'Bzzz... Error!'
-      ) : (
-        numA + numB
-      );
+      return (callsCount > 3 && callsCount % 2 === 0)
+        ? 'Bzzz... Error!'
+        : numA + numB;
     };
   };
 }
