@@ -5,15 +5,18 @@
  * @return {function}
  */
 
-function makeRobotAccountant(firstVariable) {
+function makeRobotAccountant() {
   let count = 0;
 
-  return (secondVariable) => {
+  return (firstVariable) => (secondVariable) => {
     const result = firstVariable + secondVariable;
 
     count++;
 
-    return (count > 3 && count % 2 !== 0) ? result : 'Bzzz... Error!';
+    return count < 4
+      ? result
+      : count % 2 !== 0
+        ? result : 'Bzzz... Error!';
   };
 }
 
