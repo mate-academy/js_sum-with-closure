@@ -22,5 +22,4 @@ function makeRobotAccountant() {
 
   return getSum;
 }
-
 module.exports = makeRobotAccountant;
