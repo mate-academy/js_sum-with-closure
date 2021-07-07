@@ -8,15 +8,15 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const robotAccountant = (a) => {
+  const robotAccountant = (firstOperand) => {
     count++;
 
-    return (b) => {
+    return (secondOperand) => {
       if (count > 3 && count % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return a + b;
+      return firstOperand + secondOperand;
     };
   };
 
