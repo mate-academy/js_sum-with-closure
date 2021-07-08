@@ -12,12 +12,8 @@ function makeRobotAccountant() {
     return (second) => {
       count++;
 
-      if (count > 3) {
-        if (count % 2 === 0) {
-          return 'Bzzz... Error!';
-        } else {
-          return first + second;
-        }
+      if (count > 3 && count % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
       return first + second;
