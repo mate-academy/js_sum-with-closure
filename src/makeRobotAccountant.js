@@ -12,14 +12,12 @@ function makeRobotAccountant() {
     return (elementB) => {
       const aaddition = elementA + elementB;
 
-      if (iterations < 3) {
-        iterations++;
+      iterations++;
 
+      if (iterations < 3) {
         return aaddition;
       } else {
-        iterations++;
-
-        return (iterations - 1) % 2 !== 0 ? 'Bzzz... Error!' : aaddition;
+        return (iterations) % 2 === 0 ? 'Bzzz... Error!' : aaddition;
       }
     };
   };
