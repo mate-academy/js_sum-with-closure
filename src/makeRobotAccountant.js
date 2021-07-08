@@ -10,15 +10,15 @@ function makeRobotAccountant() {
 
   return (elementA) => {
     return (elementB) => {
-      const aaddition = elementA + elementB;
+      const addition = elementA + elementB;
 
       iterations++;
 
       if (iterations < 3) {
-        return aaddition;
-      } else {
-        return (iterations) % 2 === 0 ? 'Bzzz... Error!' : aaddition;
+        return addition;
       }
+
+      return (iterations) % 2 === 0 ? 'Bzzz... Error!' : addition;
     };
   };
 }
