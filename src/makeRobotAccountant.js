@@ -19,11 +19,7 @@ function makeRobotAccountant() {
       } else {
         iterations++;
 
-        if ((iterations - 1) % 2 !== 0) {
-          return 'Bzzz... Error!';
-        } else {
-          return aaddition;
-        }
+        return (iterations - 1) % 2 !== 0 ? 'Bzzz... Error!' : aaddition;
       }
     };
   };
