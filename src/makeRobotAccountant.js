@@ -6,7 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let sumCallsCount = 0;
+
+  return (a) => (b) => {
+    sumCallsCount++;
+
+    if (sumCallsCount > 3 && sumCallsCount % 2 === 0) {
+      return 'Bzzz... Error!';
+    }
+
+    return a + b;
+  };
 }
 
 module.exports = makeRobotAccountant;
