@@ -20,7 +20,5 @@ function makeRobotAccountant() {
       return a + b;
     };
   };
-
-  // return getSum;
 }
 module.exports = makeRobotAccountant;
