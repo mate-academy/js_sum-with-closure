@@ -10,19 +10,15 @@ function makeRobotAccountant() {
 
   return (a) => {
     return (b) => {
-      if (evenOdd < 3) {
-        evenOdd++;
+      evenOdd++;
 
+      if (evenOdd <= 3) {
         return a + b;
       }
 
-      if (evenOdd % 2 === 1) {
-        evenOdd++;
-
+      if (evenOdd % 2 === 0) {
         return 'Bzzz... Error!';
       }
-
-      evenOdd++;
 
       return a + b;
     };
