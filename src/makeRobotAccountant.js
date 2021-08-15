@@ -7,7 +7,7 @@
 
 function makeRobotAccounterant() {
   // write code here
-  let currentResult = 0;
+  let currentResult;
   let counter = 0;
 
   return (firstNumber) => {
