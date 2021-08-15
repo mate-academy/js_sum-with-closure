@@ -6,17 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let evenOdd = 0;
+  let callCount = 0;
 
   return (firstInput) => {
     return (secondInput) => {
-      evenOdd++;
+      callCount++;
 
-      if (evenOdd <= 3) {
+      if (callCount <= 3) {
         return firstInput + secondInput;
       }
 
-      if (evenOdd % 2 === 0) {
+      if (callCount % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
