@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccounterant() {
+function makeRobotAccountant() {
   // write code here
   let currentResult;
   let counter = 0;
@@ -26,4 +26,4 @@ function makeRobotAccounterant() {
   };
 }
 
-module.exports = makeRobotAccounterant;
+module.exports = makeRobotAccountant;
