@@ -8,19 +8,19 @@
 function makeRobotAccountant() {
   let evenOdd = 0;
 
-  return (a) => {
-    return (b) => {
+  return (firstInput) => {
+    return (secondInput) => {
       evenOdd++;
 
       if (evenOdd <= 3) {
-        return a + b;
+        return firstInput + secondInput;
       }
 
       if (evenOdd % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return a + b;
+      return firstInput + secondInput;
     };
   };
 }
