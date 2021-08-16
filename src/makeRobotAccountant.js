@@ -6,21 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let score = 1;
+  let score = 0;
 
-  const getSum = (x) => (y) => {
+  return (x) => (y) => {
+    score++;
+
     if (score > 3 && score % 2 === 0) {
-      score++;
-
       return 'Bzzz... Error!';
-    } else {
-      score++;
-
-      return x + y;
     }
-  };
 
-  return getSum;
+    return x + y;
+  };
 }
 
 module.exports = makeRobotAccountant;
