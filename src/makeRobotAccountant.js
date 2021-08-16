@@ -17,12 +17,6 @@ function makeRobotAccountant() {
         return 'Bzzz... Error!';
       }
 
-      if (count % 2 > 0 && count > 3) {
-        count++;
-
-        return numOne + numTwo;
-      }
-
       count++;
 
       return numOne + numTwo;
