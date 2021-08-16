@@ -5,8 +5,22 @@
  * @return {function}
  */
 
-function makeRobotAccountant() {
-  // write code here
+function makeRobotAccountant(a) {
+  let callCounter = 0;
+
+  const getSum = (num1) => {
+    callCounter++;
+
+    return function(num2) {
+      if (callCounter < 3 || callCounter % 2 !== 0) {
+        return num1 + num2;
+      }
+
+      return 'Bzzz... Error!';
+    };
+  };
+
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
