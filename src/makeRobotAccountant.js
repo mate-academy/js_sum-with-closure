@@ -12,15 +12,11 @@ function makeRobotAccountant() {
     return (secondInput) => {
       callCount++;
 
-      if (callCount <= 3) {
+      if (callCount <= 3 || callCount % 2 === 1) {
         return firstInput + secondInput;
       }
 
-      if (callCount % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return firstInput + secondInput;
+      return 'Bzzz... Error!';
     };
   };
 }
