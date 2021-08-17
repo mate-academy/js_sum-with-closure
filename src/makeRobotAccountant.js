@@ -9,17 +9,17 @@ function makeRobotAccountant() {
   // write code here
   let count = 0;
 
-  const sum = firstNumber => {
-    count++;
+  return firstNumber => {
+    return secondNumber => {
+      count++;
 
-    if (count <= 3 || count % 2 !== 0) {
-      return secondNumber => firstNumber + secondNumber;
-    }
+      if (count <= 3 || count % 2 !== 0) {
+        return firstNumber + secondNumber;
+      }
 
-    return () => 'Bzzz... Error!';
+      return 'Bzzz... Error!';
+    };
   };
-
-  return sum;
 }
 
 module.exports = makeRobotAccountant;
