@@ -7,14 +7,12 @@
 
 function makeRobotAccountant() {
   let counter = 0;
-  let numberToRemember = 0;
 
   const adder = (firstNumber) => {
-    numberToRemember = firstNumber;
     counter++;
 
     const sum = (secondNumber) => {
-      return numberToRemember + secondNumber;
+      return firstNumber + secondNumber;
     };
 
     const glitch = () => {
