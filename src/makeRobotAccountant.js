@@ -19,13 +19,9 @@ function makeRobotAccountant() {
       return 'Bzzz... Error!';
     };
 
-    if (counter > 3) {
-      return (counter % 2)
-        ? sum
-        : glitch;
-    } else {
-      return sum;
-    }
+    return (counter > 3 && !(counter % 2))
+      ? glitch
+      : sum;
   };
 
   return adder;
