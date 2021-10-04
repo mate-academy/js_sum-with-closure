@@ -6,24 +6,20 @@
  */
 
 function makeRobotAccountant() {
-  let currentNo = 1;
+  let currentNo = 0;
 
   const getSum = (a) => {
-    const no = currentNo;
+    const count = currentNo;
 
-    if (no < 4 || no % 2 !== 0) {
+    return function(b) {
       currentNo++;
 
-      return function(b) {
+      if (count < 3 || (count + 1) % 2 !== 0) {
         return a + b;
-      };
-    } else {
-      currentNo++;
+      }
 
-      return function(b) {
-        return 'Bzzz... Error!';
-      };
-    }
+      return 'Bzzz... Error!';
+    };
   };
 
   return getSum;
