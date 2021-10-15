@@ -6,16 +6,13 @@
  */
 
 function makeRobotAccountant() {
-  let attempts = 3;
-  let functionCallCounter = 0;
+  let functionCallCounter = 3;
 
   return function(num1) {
-    --attempts;
+    --functionCallCounter;
 
     return function(num2) {
-      if (attempts < 0) {
-        ++functionCallCounter;
-
+      if (functionCallCounter < 0) {
         if (functionCallCounter % 2) {
           return 'Bzzz... Error!';
         }
