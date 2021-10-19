@@ -6,25 +6,24 @@
  */
 
 function makeRobotAccountant() {
-  let outerCount = 0;
-  let innerCounter = 0;
+  let counter = 1;
 
   return function(firstNumber) {
     return function(secondNumber) {
-      if (outerCount >= 3) {
-        const isEven = innerCounter % 2 === 0;
+      if (counter >= 3) {
+        const isOdd = counter % 2 !== 0;
 
-        if (isEven) {
-          innerCounter++;
-
-          return 'Bzzz... Error!';
-        } else {
-          innerCounter++;
+        if (isOdd) {
+          counter++;
 
           return firstNumber + secondNumber;
+        } else {
+          counter++;
+
+          return 'Bzzz... Error!';
         }
       } else {
-        outerCount++;
+        counter++;
 
         return firstNumber + secondNumber;
       }
