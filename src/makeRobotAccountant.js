@@ -13,7 +13,7 @@
       const result = x + y;
       counter++;
       if(counter > 3 && counter % 2 === 0) {
-        return 'Bzzz... Error!' 
+        return 'Bzzz... Error!';
       }
       return result;
     }
