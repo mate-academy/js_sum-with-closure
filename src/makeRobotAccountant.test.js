@@ -51,7 +51,7 @@ test('Starting from fourth call, '
 });
 
 test('Starting from fourth call, '
-  + 'it should works only for odd calls', () => {
+  + 'it should work only for odd calls', () => {
   const getSum = makeRobotAccountant();
 
   getSum(5)(9);
