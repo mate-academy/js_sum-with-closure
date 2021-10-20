@@ -8,15 +8,13 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  return function(firstOperand) {
-    return function(secondOperand) {
+  return (firstOperand) => {
+    return (secondOperand) => {
       callCount++;
 
-      if (callCount > 3 && callCount % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return firstOperand + secondOperand;
+      return callCount > 3 && callCount % 2 === 0
+        ? 'Bzzz... Error!'
+        : firstOperand + secondOperand;
     };
   };
 }
