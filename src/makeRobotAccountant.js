@@ -6,25 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 1;
+  let counter = 0;
 
   return function(firstNumber) {
     return function(secondNumber) {
-      if (counter >= 3) {
-        const isOdd = counter % 2 !== 0;
+      counter++;
 
-        if (isOdd) {
-          counter++;
-
-          return firstNumber + secondNumber;
-        } else {
-          counter++;
-
-          return 'Bzzz... Error!';
-        }
+      if (counter >= 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
       } else {
-        counter++;
-
         return firstNumber + secondNumber;
       }
     };
