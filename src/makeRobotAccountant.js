@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     count++;
 
     return (y) => {
-      return count < 4 ? x + y : (count % 2 === 0 ? 'Bzzz... Error!' : x + y);
+      return count > 3 && count % 2 === 0 ? 'Bzzz... Error!' : x + y;
     };
   };
 }
