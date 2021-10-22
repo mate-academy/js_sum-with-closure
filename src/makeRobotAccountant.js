@@ -6,13 +6,13 @@
  */
 
 function makeRobotAccountant() {
-  let bzzzCounter = 0;
+  let counter = 0;
 
   const getSum = (firstNum) => {
-    bzzzCounter++;
+    counter++;
 
     return (secondNum) => {
-      if (bzzzCounter <= 3 || bzzzCounter % 2 !== 0) {
+      if (counter <= 3 || counter % 2 !== 0) {
         return firstNum + secondNum;
       }
 
