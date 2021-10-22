@@ -5,7 +5,6 @@
  * @return {function}
  */
 
-
 function makeRobotAccountant() {
   // write code here
   let counter = 0;
