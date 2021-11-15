@@ -7,15 +7,12 @@
 
 function makeRobotAccountant() {
   let count = 3;
-  let evenCount = 0;
 
   const getSum = (num1) => {
     const adding = (num2) => {
       count--;
 
-      if (count < 0 && evenCount % 2 === 0) {
-        evenCount++;
-
+      if (count < 0 && count % 2 !== 0) {
         return 'Bzzz... Error!';
       }
 
