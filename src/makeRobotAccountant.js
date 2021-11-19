@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  *
@@ -6,18 +6,18 @@
  */
 
 function makeRobotAccountant() {
-  let cashCount = 1;
+  let cashCount = 0;
 
-  return (a) => (b) => {
-    if (cashCount % 2 === 0 && cashCount !== 2) {
+  return (a) => {
+    return (b) => {
       ++cashCount;
 
-      return 'Bzzz... Error!';
-    } else {
-      ++cashCount;
+      if (cashCount % 2 === 0 && cashCount !== 2) {
+        return "Bzzz... Error!";
+      }
 
       return a + b;
-    }
+    };
   };
 }
 
