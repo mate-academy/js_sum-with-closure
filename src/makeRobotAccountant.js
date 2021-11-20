@@ -12,18 +12,12 @@ function makeRobotAccountant() {
     return (y) => {
       callCounter++;
 
-      switch (true) {
-        case (callCounter <= 3): {
-          return x + y;
-        }
-
-        case (callCounter % 2 === 0): {
-          return 'Bzzz... Error!';
-        }
-
-        default: {
-          return x + y;
-        }
+      if (callCounter <= 3) {
+        return x + y;
+      } else if (callCounter % 2 === 0) {
+        return 'Bzzz... Error!';
+      } else {
+        return x + y;
       }
     };
   };
