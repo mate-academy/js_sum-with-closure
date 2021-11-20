@@ -6,7 +6,23 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let count = 0;
+
+  const accountant = (number1) => {
+    const getSum = (number2) => {
+      count++;
+
+      if (count > 3 && count % 2 === 0) {
+        return 'Bzzz... Error!';
+      }
+
+      return number1 + number2;
+    };
+
+    return getSum;
+  };
+
+  return accountant;
 }
 
 module.exports = makeRobotAccountant;
