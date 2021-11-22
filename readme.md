@@ -1,4 +1,4 @@
-# Sum with a closure
+ # Sum with a closure
 
 Accounting, numbers, many numbers. Boring. The solution is to automate! The first robot accountant came off the assembly line. I don't know how accountants' brains don't melt, but when our robot starts adding numbers, it starts to burn significantly and it counts every other time.
 Reproduce the behavior of our robots. Create a function `makeRobotAccountant`, the result of which is a function that works on the pattern `getSum (4) (5) === 9`.
