@@ -8,20 +8,14 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return (firstNum) => {
+  return (x) => (y) => {
     counter++;
 
-    let num = firstNum;
+    if (counter >= 3 && counter % 2 === 0) {
+      return 'Bzzz... Error!';
+    }
 
-    return (secondNum) => {
-      if (counter > 3 && counter % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      num += secondNum;
-
-      return num;
-    };
+    return x + y;
   };
 }
 
