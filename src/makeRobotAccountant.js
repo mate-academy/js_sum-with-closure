@@ -16,7 +16,7 @@ function makeRobotAccountant() {
         return 'Bzzz... Error!';
       }
       
-      return x + y;
+      return a + b;
     };
   };
 
