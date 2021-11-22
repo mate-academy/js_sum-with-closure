@@ -6,17 +6,18 @@
  */
 
 function makeRobotAccountant() {
-  let cnt = 0;
+  let counter = 0;
 
-  const getSum = (x) => (y) => {
-    cnt++;
+  const getSum = (x) =>
+    (y) => {
+      counter++;
 
-    if (cnt > 3 && cnt % 2 === 0) {
-      return 'Bzzz... Error!';
-    }
+      if (counter > 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
+      }
 
-    return x + y;
-  };
+      return x + y;
+    };
 
   return getSum;
 }
