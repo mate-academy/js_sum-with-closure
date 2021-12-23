@@ -23,17 +23,6 @@ function makeRobotAccountant() {
   };
 
   return getSum;
-  // let count = 0;
-
-  // const countSum = (value = 0) => {
-  //   count++;
-
-  //   return (secondValue = 0) => count > 3 && count % 2 === 0
-  //     ? 'Bzzz... Error!'
-  //     : value + secondValue;
-  // };
-
-  // return countSum;
 }
 
 module.exports = makeRobotAccountant;
