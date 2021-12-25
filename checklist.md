@@ -10,11 +10,11 @@ function a() {
 }
 ```
 
-GOOD EXAMPLE: 
+GOOD EXAMPLE:
 ```
 function a() {
- return function () {
-   console.log('Hello');
+ return function() {
+   console.log('Hello') ;
  }
 }
 ```
