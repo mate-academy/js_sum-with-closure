@@ -6,10 +6,10 @@
  */
 
 function makeRobotAccountant() {
-  let c = 0;
+  let counter = 0;
 
   function sum(first) {
-    c++;
+    counter++;
 
     function err() {
       return 'Bzzz... Error!';
@@ -19,7 +19,7 @@ function makeRobotAccountant() {
       return first + second;
     }
 
-    if (c > 3 && c % 2 === 0) {
+    if (counter > 3 && counter % 2 === 0) {
       return err;
     }
 
