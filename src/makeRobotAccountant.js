@@ -14,9 +14,9 @@ function makeRobotAccountant() {
 
       if (count >= 4 && count % 2 === 0) {
         return 'Bzzz... Error!';
-      } else {
-        return firstNumber + secondNumber;
       }
+
+      return firstNumber + secondNumber;
     };
   };
 }
