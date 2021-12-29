@@ -11,19 +11,19 @@ function makeRobotAccountant() {
   const getSum = function(a) {
     limit--;
 
+    const sum = function(b) {
+      return a + b;
+    };
+
     if (limit >= 0 || limit % 2 === 0) {
-      const sum = function(b) {
-        return a + b;
-      };
-
       return sum;
-    } else {
-      const error = function() {
-        return 'Bzzz... Error!';
-      };
+    };
 
-      return error;
-    }
+    const error = function() {
+      return 'Bzzz... Error!';
+    };
+
+    return error;
   };
 
   return getSum;
