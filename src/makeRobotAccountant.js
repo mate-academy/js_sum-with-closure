@@ -23,17 +23,3 @@ function makeRobotAccountant() {
 }
 
 module.exports = makeRobotAccountant;
-
-// let counter = 0;
-
-//   const result = function(b) {
-//     counter++;
-
-//     if (counter % 2 === 0 && counter >= 3) {
-//       return `Bzzz... Error!`;
-//     } else {
-//       return a + b;
-//     }
-//   };
-
-//   return result;
