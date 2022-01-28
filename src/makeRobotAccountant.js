@@ -18,9 +18,9 @@ function makeRobotAccountant() {
         } else {
           return x + y;
         }
-      } else {
-        return x + y;
       }
+
+      return x + y;
     };
   }
 
