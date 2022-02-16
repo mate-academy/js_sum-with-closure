@@ -3,17 +3,13 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  count++;
-
   return function(x) {
+    count++;
+
     return function(y) {
       if (count >= 4 && count % 2 === 0) {
-        count++;
-
         return 'Bzzz... Error!';
       } else {
-        count++;
-
         return x + y;
       }
     };
