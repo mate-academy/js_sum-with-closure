@@ -6,7 +6,7 @@
  */
 
 function makeRobotAccountant() {
-  let willWork = true;
+  let isWorkable = true;
   let successfulCalls = 3;
 
   return (valueA) => {
@@ -14,10 +14,10 @@ function makeRobotAccountant() {
       if (successfulCalls) {
         --successfulCalls;
       } else {
-        willWork = !willWork;
+        isWorkable = !isWorkable;
       }
 
-      if (!willWork) {
+      if (!isWorkable) {
         return 'Bzzz... Error!';
       }
 
