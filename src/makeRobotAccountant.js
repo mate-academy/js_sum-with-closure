@@ -9,8 +9,7 @@ function makeRobotAccountant() {
   let isWorkable = true;
   let successfulCalls = 3;
 
-  return (valueA) => {
-    return (valueB) => {
+  return (valueA) => (valueB) => {
       if (successfulCalls) {
         --successfulCalls;
       } else {
@@ -23,7 +22,6 @@ function makeRobotAccountant() {
 
       return valueA + valueB;
     };
-  };
 }
 
 module.exports = makeRobotAccountant;
