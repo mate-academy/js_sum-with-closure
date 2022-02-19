@@ -8,14 +8,14 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const getSum = (a) => (b) => {
+  const getSum = firstParam => secondParam => {
     count++;
 
     if (count % 2 === 0 && count > 3) {
       return 'Bzzz... Error!';
     }
 
-    return a + b;
+    return firstParam + secondParam;
   };
 
   return getSum;
