@@ -13,11 +13,10 @@ function makeRobotAccountant() {
       canWork--;
 
       return first + second;
-    } else {
-      canWork++;
-
-      return 'Bzzz... Error!';
     }
+    canWork++;
+
+    return 'Bzzz... Error!';
   };
 }
 
