@@ -6,17 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let countOfUses = 0;
 
-  return (a) => (b) => {
-    if (count === 3) {
-      count--;
+  return (numberA) => (numberB) => {
+    if (countOfUses === 3) {
+      countOfUses--;
 
       return `Bzzz... Error!`;
     } else {
-      count++;
+      countOfUses++;
 
-      return a + b;
+      return numberA + numberB;
     }
   };
 }
