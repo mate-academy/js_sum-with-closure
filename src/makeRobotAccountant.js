@@ -6,16 +6,13 @@
  */
 
 function makeRobotAccountant() {
-  let firstCallCount = 0;
-  let nextcallCount = 1;
+  let callCount = 0;
 
   return function getSum(x) {
     return function result(y) {
-      firstCallCount++;
+      callCount++;
 
-      if (firstCallCount === 4 || nextcallCount === 2) {
-        nextcallCount = 1;
-
+      if (callCount === 4) {
         return 'Bzzz... Error!';
       }
 
