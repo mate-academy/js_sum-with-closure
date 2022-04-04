@@ -13,7 +13,8 @@ function makeRobotAccountant() {
 
     return (secondNum) => {
       return (counter % 2 === 1 || counter === 2)
-        ? firstNum + secondNum : 'Bzzz... Error!';
+        ? firstNum + secondNum
+        : 'Bzzz... Error!';
     };
   };
 }
