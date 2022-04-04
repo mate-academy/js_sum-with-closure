@@ -16,9 +16,6 @@ function makeRobotAccountant() {
 
       if ((count > 3) && (count % 2 === 0)) {
         return 'Bzzz... Error!';
-      } else
-      if ((count > 3) && (count % 2 !== 0)) {
-        return sum;
       }
 
       return sum;
