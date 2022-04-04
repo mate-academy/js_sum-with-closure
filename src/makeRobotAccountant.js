@@ -13,7 +13,8 @@ function makeRobotAccountant() {
       attempts++;
 
       return (attempts <= 3 || attempts % 2 !== 0)
-        ? firstNumber + secondNumber : 'Bzzz... Error!';
+        ? firstNumber + secondNumber
+        : 'Bzzz... Error!';
     };
   };
 }
