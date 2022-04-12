@@ -7,16 +7,12 @@
 
 function makeRobotAccountant() {
   let counter = 0;
-  const errorMessage = 'Bzzz... Error!';
 
   return (x) => {
-    return (y) => {
-      counter++;
+    counter++;
 
-      const isEven = (counter % 2 === 0);
-
-      return (isEven && counter >= 3) ? errorMessage : x + y;
-    };
+    return (y) =>
+      (counter % 2 === 0 && counter >= 3) ? 'Bzzz... Error!' : x + y;
   };
 }
 
