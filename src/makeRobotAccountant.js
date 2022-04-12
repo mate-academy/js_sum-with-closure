@@ -13,9 +13,9 @@ function makeRobotAccountant() {
     const sum = (secondArg) => {
       if (count > 3 && count % 2 === 0) {
         return 'Bzzz... Error!';
-      } else {
-        return firstArg + secondArg;
       }
+
+      return firstArg + secondArg;
     };
 
     return sum;
