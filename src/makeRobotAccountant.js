@@ -15,7 +15,7 @@ function makeRobotAccountant() {
       counter++;
 
       if (currentCount === 3) {
-        counter = 0;
+        counter = 2;
 
         return 'Bzzz... Error!';
       }
