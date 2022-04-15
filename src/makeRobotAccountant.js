@@ -6,17 +6,13 @@
  */
 
 function makeRobotAccountant() {
-  let count = -1;
+  let count = 0;
 
   const robot = (arg1) => {
     count++;
 
     const robot2 = (arg2) => {
-      if (count <= 2) {
-        return arg1 + arg2;
-      }
-
-      if (count > 2 && count % 2 !== 0) {
+      if (count > 3 && count % 2 === 0) {
         return `Bzzz... Error!`;
       }
 
