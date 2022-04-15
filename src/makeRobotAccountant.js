@@ -6,7 +6,23 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let counter = 0;
+
+  return function(numberOne) {
+    return function(numberTwo) {
+      const currentCount = counter;
+
+      counter++;
+
+      if (currentCount === 3) {
+        counter = 2;
+
+        return 'Bzzz... Error!';
+      }
+
+      return numberOne + numberTwo;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
