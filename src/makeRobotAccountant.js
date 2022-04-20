@@ -12,14 +12,10 @@ function makeRobotAccountant() {
     return function(y) {
       calls++;
 
-      if (calls < 4) {
-        return x + y;
-      }
-
-      if (calls > 4 && calls % 2 !== 0) {
-        return x + y;
-      } else {
+      if (calls > 3 && calls % 2 === 0) {
         return 'Bzzz... Error!';
+      } else {
+        return x + y;
       }
     };
   };
