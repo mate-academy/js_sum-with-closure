@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     const secondAdd = (number2) => {
       callNumber++;
 
-      return ((callNumber >= 4) && !(callNumber % 2))
+      return ((callNumber >= 4) && (callNumber % 2 === 0))
         ? 'Bzzz... Error!'
         : number1 + number2;
     };
