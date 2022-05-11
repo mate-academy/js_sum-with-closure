@@ -12,11 +12,7 @@ function makeRobotAccountant() {
     counter++;
 
     return (secArg) => {
-      if (counter < 3) {
-        return firstArg + secArg;
-      }
-
-      if (counter % 2 === 0) {
+      if (counter < 3 || counter % 2 === 0) {
         return firstArg + secArg;
       }
 
