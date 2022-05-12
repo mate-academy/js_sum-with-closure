@@ -8,15 +8,15 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return firstCall => {
+  return firstCallValue => {
     counter++;
 
-    return secondCall => {
+    return secondCallValue => {
       if (counter > 3 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return firstCall + secondCall;
+      return firstCallValue + secondCallValue;
     };
   };
 }
