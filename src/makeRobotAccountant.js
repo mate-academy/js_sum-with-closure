@@ -7,13 +7,13 @@
 
 function makeRobotAccountant() {
   // write code here
-  let counter = 0;
+  let count = 0;
 
   const getSome = (num1) => {
-    counter++;
+    count++;
 
     return (num2) => {
-      if (counter >= 3 && counter % 2 === 0) {
+      if (count >= 3 && count % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
