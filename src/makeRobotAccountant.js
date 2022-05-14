@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return (firstNum) => {
+  const getSum = (firstNum) => {
     counter++;
 
     return (secondNum) => {
@@ -21,6 +21,8 @@ function makeRobotAccountant() {
       return sum;
     };
   };
+
+  return getSum;
 };
 
 module.exports = makeRobotAccountant;
