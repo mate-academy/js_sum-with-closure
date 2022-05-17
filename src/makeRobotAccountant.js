@@ -6,23 +6,23 @@
  */
 
 function makeRobotAccountant() {
-  let count = 4;
+  let count = 0;
 
-  const inner = (part) => {
-    return (par) => {
-      count--;
+  const innerFunction = (firstPart) => {
+    return (secondPart) => {
+      count++;
 
-      if (count === 0) {
-        count = 3;
+      if (count === 4) {
+        count = 0;
 
         return 'Bzzz... Error!';
       }
 
-      return par + part;
+      return secondPart + firstPart;
     };
   };
 
-  return inner;
+  return innerFunction;
 }
 
 module.exports = makeRobotAccountant;
