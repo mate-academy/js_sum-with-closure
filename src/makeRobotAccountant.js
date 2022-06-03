@@ -9,14 +9,14 @@ function makeRobotAccountant() {
   let count = 0;
 
   const getSum = (value) => {
-    return (value1) => {
+    return (nextValue) => {
       count++;
 
-      const breakCondition = count > 3 && count % 2 === 0;
+      const shouldBreak = count > 3 && count % 2 === 0;
 
-      const result = value + value1;
+      const result = value + nextValue;
 
-      return breakCondition
+      return shouldBreak
         ? 'Bzzz... Error!'
         : result;
     };
