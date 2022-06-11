@@ -18,9 +18,7 @@ function makeRobotAccountant() {
       };
     }
 
-    if (count <= 3) {
-      return (y) => x + y;
-    }
+    return (y) => x + y;
   };
 
   return result;
