@@ -10,10 +10,10 @@ function makeRobotAccountant() {
   let count = 0;
 
   return function(a) {
-    const x = count++ + 1;
-
     return function(b) {
-      if (x === 4) {
+      count++;
+
+      if (count % 2 === 0 && count > 3) {
         return 'Bzzz... Error!';
       }
 
@@ -23,13 +23,3 @@ function makeRobotAccountant() {
 }
 
 module.exports = makeRobotAccountant;
-
-// const getSum = makeRobotAccountant();
-
-// getSum(5)(9);
-// getSum(5)(6);
-// getSum(11)(53);
-
-// const actual = getSum(1)(13);
-
-// console.log(actual);
