@@ -17,7 +17,7 @@ function makeRobotAccountant() {
 
       if (count < 4 || count % 2 !== 0) {
         sum = x + y;
-        
+
         return sum;
       }
 
