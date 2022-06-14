@@ -12,11 +12,7 @@ function makeRobotAccountant() {
   const getSum = (firstValue) => {
     calls++;
 
-    const trowError = (calls <= callsLimit)
-      ? false
-      : calls % 2 === 0;
-
-    return trowError
+    return (calls > callsLimit && calls % 2 === 0)
       ? () => 'Bzzz... Error!'
       : secondValue => firstValue + secondValue;
   };
