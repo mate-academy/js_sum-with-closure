@@ -12,7 +12,8 @@ test('The call result of makeRobotAccountant should be function', () => {
 test('The call result of getSum(5)(6) should be a number', () => {
   const getSum = makeRobotAccountant();
 
-  const actual = getSum(5)(6);
+  const newLocal = getSum(5);
+  const actual = newLocal(6);
 
   expect(typeof actual)
     .toBe('number');
