@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let functionCallCounter = 0;
   const getSum = (first) => {
-    return function getFirstArgument(second) {
+    return function getSecondCallArgument(second) {
       functionCallCounter++;
 
       if ((functionCallCounter % 2 === 0)
