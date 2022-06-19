@@ -6,21 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let count = -1;
 
   function sum(x) {
+    count++;
+
     return (y) => {
-      const requestCount = count;
-
-      count++;
-
-      if (requestCount < 3) {
-        return x + y;
-      } else if (requestCount % 2 === 0) {
+      if (count < 3 || count % 2 === 0) {
         return x + y;
       } else {
         return 'Bzzz... Error!';
-      }
+      };
     };
   };
 
