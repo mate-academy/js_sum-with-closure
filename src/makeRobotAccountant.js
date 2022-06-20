@@ -6,17 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let callCount = 0;
 
-  function addToNumber(x) {
-    count++;
+  function addRobot(x) {
+    callCount++;
 
-    const error = `Bzzz... Error!`;
+    const errorMessage = `Bzzz... Error!`;
 
-    return (y) => count < 4 || count % 2 !== 0 ? x + y : error;
+    return (y) => callCount < 4 || callCount % 2 !== 0 ? x + y : errorMessage;
   }
 
-  return addToNumber;
+  return addRobot;
 }
 
 module.exports = makeRobotAccountant;
