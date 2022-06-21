@@ -8,15 +8,15 @@
 function makeRobotAccountant() {
   let callsCount = 0;
 
-  return (x) => {
+  return (num1) => {
     callsCount++;
 
-    return (y) => {
+    return (num2) => {
       if (callsCount >= 4 && callsCount % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return x + y;
+      return num1 + num2;
     };
   };
 }
