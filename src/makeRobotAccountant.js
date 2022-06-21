@@ -11,11 +11,15 @@ function makeRobotAccountant() {
   function addRobot(firstValue) {
     callCount++;
 
-    const errorMessage = `Bzzz... Error!`;
+    const errorMessage = 'Bzzz... Error!';
 
-    return (secondValue) => callCount < 4 || callCount % 2 !== 0
-      ? firstValue + secondValue
-      : errorMessage;
+    return (secondValue) => {
+      if (callCount > 3 && callCount % 2 === 0) {
+        return errorMessage;
+      }
+
+      return firstValue + secondValue;
+    };
   }
 
   return addRobot;
