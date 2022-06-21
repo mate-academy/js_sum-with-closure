@@ -7,17 +7,17 @@
 
 function makeRobotAccountant() {
   let count = 4;
-  const argA = (a) => {
-    const argB = (b) => {
+  const getSum = (a) => {
+    const getSumWithRestriction = (b) => {
       count--;
 
-      return (count === 0) ? (`Bzzz... Error!`) : (a + b);
+      return (count === 0 && count % 2 === 0) ? (`Bzzz... Error!`) : (a + b);
     };
 
-    return argB;
+    return getSumWithRestriction;
   };
 
-  return argA;
+  return getSum;
 };
 
 module.exports = makeRobotAccountant;
