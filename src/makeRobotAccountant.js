@@ -7,19 +7,19 @@
 
 function makeRobotAccountant() {
   // write code here
-  let callsChecker = 3;
+  let callsChecker = 0;
 
   return (num1) => {
     return (num2) => {
-      if (callsChecker <= 0 && callsChecker % 2 === 0) {
-        callsChecker--;
+      callsChecker++;
 
+      if (callsChecker > 3 && callsChecker % 2 === 0) {
         return 'Bzzz... Error!';
       }
-      callsChecker--;
 
       return num1 + num2;
     };
+
   };
 }
 
