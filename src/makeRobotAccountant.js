@@ -13,9 +13,7 @@ function makeRobotAccountant() {
     return (secondNum) => {
       counter--;
 
-      const condition = counter < 0 && counter % 2 !== 0;
-
-      return condition
+      return counter < 0 && counter % 2 !== 0
         ? 'Bzzz... Error!'
         : firstNum + secondNum;
     };
