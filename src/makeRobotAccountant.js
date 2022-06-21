@@ -12,8 +12,11 @@ function makeRobotAccountant() {
     attempts++;
 
     return function(b) {
-      return attempts > 3 && attempts % 2 === 0 ? 'Bzzz... Error!'
-        : a + b;
+      if (attempts > 3 && attempts % 2 === 0) {
+        return 'Bzzz... Error!';
+      }
+
+      return a + b;
     };
   };
 }
