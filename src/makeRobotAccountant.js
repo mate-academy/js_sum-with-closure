@@ -6,7 +6,6 @@
  */
 
 function makeRobotAccountant() {
-  let sum = 0;
   let counter = 0;
 
   const getSum = (firstNumber) => {
@@ -17,9 +16,7 @@ function makeRobotAccountant() {
         return `Bzzz... Error!`;
       }
 
-      sum = firstNumber + secondNumber;
-
-      return sum;
+      return firstNumber + secondNumber;
     };
 
     return getSecondNumber;
