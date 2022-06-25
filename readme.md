@@ -7,7 +7,7 @@ The first 3 calls to this feature work fine. Then all even calls return the stri
 Example:
 ```
 const getSum = makeRobotAccountant();
-getSum(5)(6) === 11;
+getSum(5) === 11;
 getSum(1)(3) === 4;
 getSum(6)(6) === 12;
 getSum(55)(16) === 'Bzzz... Error!';
