@@ -10,22 +10,15 @@ function makeRobotAccountant() {
   let count = 1;
 
   return function(x) {
-    const copyX = x;
-
+    // const copyX = x;
     return function(y) {
-      if (count <= 3) {
-        count++;
+      count++;
 
-        return copyX + y;
-      } else if (count > 3 && count % 2 === 1) {
-        count++;
-
-        return copyX + y;
-      } else {
-        count++;
-
+      if (count > 3 && count % 2 === 1) {
         return 'Bzzz... Error!';
       }
+
+      return x + y;
     };
   };
 }
