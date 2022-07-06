@@ -15,6 +15,6 @@ function makeRobotAccountant() {
       ? () => 'Bzzz... Error!'
       : (secondDigit) => firstDigit + secondDigit;
   };
-};
+}
 
 module.exports = makeRobotAccountant;
