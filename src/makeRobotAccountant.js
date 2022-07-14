@@ -10,13 +10,11 @@ function makeRobotAccountant() {
 
   const result = function getSum(firstNum) {
     return function(secondNum) {
-      count += 1;
+      count++;
 
-      if (count <= 3 || (count % 2)) {
-        return firstNum + secondNum;
-      }
-
-      return 'Bzzz... Error!';
+      return (count <= 3 || (count % 2))
+        ? firstNum + secondNum
+        : 'Bzzz... Error!';
     };
   };
 
