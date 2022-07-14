@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let errorCounter = 3;
 
-  const robot = (a) => {
-    return (b) => {
+  const robot = (firstValue) => {
+    return (secondVlue) => {
       if (errorCounter === 0) {
         errorCounter++;
 
@@ -18,7 +18,7 @@ function makeRobotAccountant() {
 
       errorCounter--;
 
-      return a + b;
+      return firstValue + secondVlue;
     };
   };
 
