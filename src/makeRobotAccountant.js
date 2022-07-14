@@ -21,11 +21,9 @@ function makeRobotAccountant() {
     firstNumber = undefined;
     callNumber++;
 
-    if (callNumber > 3 && callNumber % 2 === 0) {
-      return 'Bzzz... Error!';
-    }
-
-    return sum;
+    return callNumber > 3 && callNumber % 2 === 0
+      ? 'Bzzz... Error!'
+      : sum;
   };
 
   return add;
