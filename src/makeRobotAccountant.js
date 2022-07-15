@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let count = 0;
 
   return (firstNum) => {
-    return function(secondNum) {
+    return (secondNum) => {
       count++;
 
       return (count <= 3 || (count % 2))
