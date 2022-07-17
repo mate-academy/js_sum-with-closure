@@ -19,8 +19,4 @@ function makeRobotAccountant() {
   };
 }
 
-// const getSum = makeRobotAccountant();
-
-// console.log(getSum);
-
 module.exports = makeRobotAccountant;
