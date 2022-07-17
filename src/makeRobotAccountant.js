@@ -10,15 +10,11 @@ function makeRobotAccountant() {
 
   return function(firstDigit) {
     return function(secondDigit) {
-      if (counter >= 3 && counter % 2 === 1) {
-        counter++;
-
-        return 'Bzzz... Error!';
-      }
-
       counter++;
 
-      return firstDigit + secondDigit;
+      return counter > 3 && counter % 2 === 0
+        ? 'Bzzz... Error!'
+        : firstDigit + secondDigit;
     };
   };
 }
