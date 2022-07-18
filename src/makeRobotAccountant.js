@@ -8,12 +8,12 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (param) => {
+  return (num) => {
     let result = 0;
 
     count++;
 
-    result += param;
+    result += num;
 
     const innerGetSum = (anotherNum) => {
       return count === 2 || count % 2 !== 0
