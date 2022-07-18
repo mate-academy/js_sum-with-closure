@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const getSum = (param) => {
+  return (param) => {
     let result = 0;
 
     count++;
@@ -23,8 +23,6 @@ function makeRobotAccountant() {
 
     return innerGetSum;
   };
-
-  return getSum;
 }
 
 module.exports = makeRobotAccountant;
