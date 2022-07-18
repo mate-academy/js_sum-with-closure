@@ -6,12 +6,12 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let numberOfCalls = 0;
   const getSum = (x) => {
     return (y) => {
-      count++;
+      numberOfCalls++;
 
-      if (count > 3 && count % 2 === 0) {
+      if (numberOfCalls > 3 && numberOfCalls % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
