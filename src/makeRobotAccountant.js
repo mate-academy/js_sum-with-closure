@@ -6,13 +6,13 @@
  */
 
 function makeRobotAccountant() {
-  let sum = 0;
+  let counter = 0;
 
   return (first) => {
     return (second) => {
-      sum++;
+      counter++;
 
-      if (sum > 3 && sum % 2 !== 1) {
+      if (counter > 3 && counter % 2 !== 1) {
         return 'Bzzz... Error!';
       }
 
