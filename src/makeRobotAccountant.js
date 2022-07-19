@@ -6,27 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  let firstNumber;
-  let callNumber = 0;
+  let errorCounter = 3;
 
-  const add = function(number = 0) {
-    if (firstNumber === undefined) {
-      firstNumber = number;
+  return (firstValue) => {
+    return (secondValue) => {
+      if (errorCounter === 0) {
+        errorCounter++;
 
-      return add;
-    }
+        return 'Bzzz... Error!';
+      }
 
-    const sum = firstNumber + number;
+      errorCounter--;
 
-    firstNumber = undefined;
-    callNumber++;
-
-    return callNumber > 3 && callNumber % 2 === 0
-      ? 'Bzzz... Error!'
-      : sum;
+      return firstValue + secondValue;
+    };
   };
-
-  return add;
 }
 
 module.exports = makeRobotAccountant;
