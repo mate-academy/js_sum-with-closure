@@ -14,9 +14,9 @@ function makeRobotAccountant() {
     return function(y) {
       if (counter <= 3 || counter % 2 !== 0) {
         return x + y;
-      } else if (counter > 3 && counter % 2 === 0) {
-        return 'Bzzz... Error!';
       }
+
+      return 'Bzzz... Error!';
     };
   };
 }
