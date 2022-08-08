@@ -6,12 +6,14 @@
  */
 
 function makeRobotAccountant() {
+  const isError = (currentRun, errorsAfter = 3) =>
+    currentRun > errorsAfter && currentRun % 2 === 0;
   let runsCount = 0;
 
   return (x) => (y) => {
     runsCount++;
 
-    if (runsCount > 3 && runsCount % 2 === 0) {
+    if (isError(runsCount)) {
       return 'Bzzz... Error!';
     }
 
