@@ -9,10 +9,10 @@ function makeRobotAccountant() {
   let count = 0;
   const maxCount = 3;
 
-  const sum = (x) => {
+  return (x) => {
     count++;
 
-    return function(y) {
+    return (y) => {
       if (count > maxCount && count % 2 === 0) {
         return 'Bzzz... Error!';
       }
@@ -20,8 +20,6 @@ function makeRobotAccountant() {
       return x + y;
     };
   };
-
-  return sum;
 }
 
 module.exports = makeRobotAccountant;
