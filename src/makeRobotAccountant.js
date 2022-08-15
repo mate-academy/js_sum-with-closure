@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let callsCount = 0;
   const callsLimit = 3;
 
-  return function sum(x) {
+  return (x) => {
     return (y) => {
       ++callsCount;
 
