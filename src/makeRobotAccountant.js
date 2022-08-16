@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let sumCount = 0;
 
-  return function getSum(firstNum) {
+  return (firstNum) => {
     sumCount++;
 
     return (secondNum) => {
