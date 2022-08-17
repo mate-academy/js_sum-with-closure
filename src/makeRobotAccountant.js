@@ -12,9 +12,13 @@ function makeRobotAccountant() {
   return function getSum(x) {
     count++;
 
-    return (y) => ((count % 2 === 0) && (count > maxCalls))
-      ? 'Bzzz... Error!'
-      : x + y;
+    return function(y) {
+      if ((count % 2 === 0) && (count > maxCalls)) {
+        return 'Bzzz... Error!';
+      } else {
+        return x + y;
+      }
+    };
   };
 }
 
