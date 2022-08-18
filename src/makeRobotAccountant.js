@@ -25,13 +25,4 @@ function makeRobotAccountant() {
   return accounter;
 }
 
-// const getSum = makeRobotAccountant();
-
-// getSum(5)(6);
-// getSum(5)(6);
-// getSum(5)(6);
-// getSum(5)(6);
-// getSum(5)(6);
-// getSum(5)(6);
-
 module.exports = makeRobotAccountant;
