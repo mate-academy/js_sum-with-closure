@@ -15,9 +15,9 @@ function makeRobotAccountant() {
     return function(y) {
       if ((count % 2 === 0) && (count > maxCalls)) {
         return 'Bzzz... Error!';
-      } else {
-        return x + y;
       }
+
+      return x + y;
     };
   };
 }
