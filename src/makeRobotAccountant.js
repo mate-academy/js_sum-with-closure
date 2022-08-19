@@ -7,16 +7,17 @@
 
 function makeRobotAccountant() {
   let countOfCalls = 0;
+  const maxCalls = 4;
 
   function getSum(firstOperand) {
     return function(secondOperand) {
       countOfCalls++;
 
-      if (countOfCalls >= 4 && countOfCalls % 2 === 0) {
+      if (countOfCalls >= maxCalls && countOfCalls % 2 === 0) {
         return 'Bzzz... Error!';
-      } else {
-        return firstOperand + secondOperand;
       }
+
+      return firstOperand + secondOperand;
     };
   };
 
