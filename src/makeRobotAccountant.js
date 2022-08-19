@@ -7,18 +7,16 @@
 
 function makeRobotAccountant() {
   let counter = 0;
-  let result;
 
   const accounter = function(x) {
     return function(y) {
       counter++;
-      result = x + y;
 
       if ((counter > 3) && (counter % 2 === 0)) {
-        result = 'Bzzz... Error!';
+        return 'Bzzz... Error!';
       }
 
-      return result;
+      return x + y;
     };
   };
 
