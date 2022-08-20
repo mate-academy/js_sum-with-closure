@@ -10,15 +10,15 @@ function makeRobotAccountant() {
   let callsCount = 0;
   const limit = 3;
 
-  const getSum = (x) => {
-    return (y) => {
+  const getSum = (firstTerm) => {
+    return (secondTerm) => {
       callsCount++;
 
       if (callsCount % 2 === 0 && limit < callsCount) {
         return 'Bzzz... Error!';
       };
 
-      return x + y;
+      return firstTerm + secondTerm;
     };
   };
 
