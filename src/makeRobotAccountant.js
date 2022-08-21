@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccountant(digit) {
+function makeRobotAccountant() {
   let count = 0;
   const firstThreeCalls = 3;
 
