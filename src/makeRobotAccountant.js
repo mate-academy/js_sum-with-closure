@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     return (b) => {
       count--;
 
-      if (count < 0 && Math.abs(count) % 2 !== 0) {
+      if (count < 0 && count % 2 !== 0) {
         return `Bzzz... Error!`;
       };
 
