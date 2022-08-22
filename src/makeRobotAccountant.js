@@ -12,13 +12,11 @@ function makeRobotAccountant() {
     return (b) => {
       count--;
 
-      if (count < 0 && count % 2 !== 0) {
-        return `Bzzz... Error!`;
-      };
-
-      return a + b;
+      return (count < 0 && count % 2 !== 0)
+        ? `Bzzz... Error!`
+        : a + b;
     };
   };
-}
+};
 
 module.exports = makeRobotAccountant;
