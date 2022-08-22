@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let callsCounter = 0;
   const сorrectCalls = 4;
 
-  function getSum(firstNum) {
+  return (firstNum) => {
     callsCounter++;
 
     return (secondNum) => {
@@ -19,9 +19,7 @@ function makeRobotAccountant() {
 
       return firstNum + secondNum;
     };
-  }
-
-  return getSum;
+  };
 }
 
 module.exports = makeRobotAccountant;
