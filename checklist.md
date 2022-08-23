@@ -10,7 +10,7 @@ function a() {
 }
 ```
 
-GOOD EXAMPLE: 
+GOOD EXAMPLE:
 ```
 function a() {
  return function () {
