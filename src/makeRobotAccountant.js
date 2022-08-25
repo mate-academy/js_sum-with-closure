@@ -7,12 +7,11 @@
 
 function makeRobotAccountant() {
   let counterOfCalls = 0;
-  const maxCall = 4;
 
   const addCall = (first) => {
     counterOfCalls++;
 
-    return (second) => (counterOfCalls < maxCall || counterOfCalls % 2)
+    return (second) => (counterOfCalls < 4 || counterOfCalls % 2)
       ? first + second
       : 'Bzzz... Error!';
   };
