@@ -8,12 +8,12 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (x) => {
-    return (y) => {
+  return (numberOne) => {
+    return (numberTwo) => {
       count++;
 
       if (count <= 3 || count % 2 === 1) {
-        return x + y;
+        return numberOne + numberTwo;
       } else {
         return 'Bzzz... Error!';
       }
