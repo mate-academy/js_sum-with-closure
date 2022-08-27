@@ -3,13 +3,13 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const f = (a) => {
+  const sumOne = (num1) => {
     count++;
 
-    let sum = a;
+    let sum = num1;
 
-    const c = (b) => {
-      sum += b;
+    const sumTwo = (num2) => {
+      sum += num2;
 
       if (count >= 4 && count % 2 === 0) {
         return 'Bzzz... Error!';
@@ -18,10 +18,10 @@ function makeRobotAccountant() {
       return sum;
     };
 
-    return c;
+    return sumTwo;
   };
 
-  return f;
+  return sumOne;
 }
 
 module.exports = makeRobotAccountant;
