@@ -6,7 +6,9 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  return () => {
+    return 'count';
+  };
 }
 
 module.exports = makeRobotAccountant;
