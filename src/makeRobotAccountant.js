@@ -6,21 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let countCalls = 0;
 
-  return function getSum(y) {
-    count++;
+  return function getSum(firstNumber) {
+    countCalls++;
 
-    let sum = y;
+    let sumNumbers = firstNumber;
 
-    return function(x) {
-      if (count <= 3 || count % 2 !== 0) {
-        sum += x;
+    return function(secondNumber) {
+      if (countCalls <= 3 || countCalls % 2 !== 0) {
+        sumNumbers += secondNumber;
 
-        return sum;
+        return sumNumbers;
       }
 
-      if (count > 3) {
+      if (countCalls > 3) {
         return 'Bzzz... Error!';
       }
     };
