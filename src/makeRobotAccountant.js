@@ -9,10 +9,16 @@ function makeRobotAccountant() {
   // write code here
   let count = 0;
 
-  return (a) => {
+  return (firstValue) => {
     count++;
 
-    return (b) => (!(count % 2) && count > 3) ? 'Bzzz... Error!' : a + b;
+    const condition = !(count % 2) && count > 3;
+
+    return (secondValue) => (
+      condition
+        ? 'Bzzz... Error!'
+        : firstValue + secondValue
+    );
   };
 }
 
