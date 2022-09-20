@@ -7,12 +7,12 @@
 
 function makeRobotAccountant() {
   // write code here
-  let count = 0;
+  let callCount = 0;
 
   return (firstValue) => {
-    count++;
+    callCount++;
 
-    const condition = !(count % 2) && count > 3;
+    const condition = !(callCount % 2) && callCount > 3;
 
     return (secondValue) => (
       condition
