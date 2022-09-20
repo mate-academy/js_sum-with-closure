@@ -11,16 +11,12 @@ function makeRobotAccountant() {
   const getSum = (firstVar) => {
     count++;
 
-    const currentCallNumber = count;
+    const typeCondition = count < 3 || count % 2 === 1;
 
-    if (currentCallNumber < 3 || currentCallNumber % 2 === 1) {
-      return (secondVar) => {
-        return firstVar + secondVar;
-      };
+    if (typeCondition) {
+      return (secondVar) => firstVar + secondVar;
     } else {
-      return (secondVar) => {
-        return 'Bzzz... Error!';
-      };
+      return () => 'Bzzz... Error!';
     }
   };
 
