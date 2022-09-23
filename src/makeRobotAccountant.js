@@ -12,17 +12,13 @@ function makeRobotAccountant() {
   const robot = (a) => {
     count++;
 
-    return count < 4
+    return count > 3 && count % 2 === 0
       ? (b) => {
-        return a + b;
+        return errorMessage;
       }
-      : count % 2 === 0
-        ? (b) => {
-          return errorMessage;
-        }
-        : (b) => {
-          return a + b;
-        };
+      : (b) => {
+        return a + b;
+      };
   };
 
   return robot;
