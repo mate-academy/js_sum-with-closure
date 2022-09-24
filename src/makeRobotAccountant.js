@@ -6,21 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 0;
+  let operCounter = 0;
 
-  const add = (firstValue) => {
+  return (firstValue) => {
     return (secondValue) => {
-      counter++;
+      operCounter++;
 
-      if (counter > 3 && counter % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return firstValue + secondValue;
+      return (operCounter > 3 && operCounter % 2 === 0)
+        ? 'Bzzz... Error!'
+        : firstValue + secondValue;
     };
   };
-
-  return add;
 }
 
 module.exports = makeRobotAccountant;
