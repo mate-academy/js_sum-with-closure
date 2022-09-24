@@ -6,12 +6,14 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let countOfCalls = 0;
 
-  return (a) => {
-    count++;
+  return (firstNumber) => {
+    countOfCalls++;
 
-    return (b) => (count % 2 === 0 && count > 3) ? 'Bzzz... Error!' : a + b;
+    return (secondNumber) => (countOfCalls % 2 === 0 && countOfCalls > 3)
+      ? 'Bzzz... Error!'
+      : firstNumber + secondNumber;
   };
 }
 
