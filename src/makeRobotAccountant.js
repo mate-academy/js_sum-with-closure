@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let counter = 1;
 
-  return function(x) {
-    return function(y) {
+  const getSum = function(firstSummand) {
+    return function(secondSummand) {
       if (counter > 3 && counter % 2 === 0) {
         counter++;
 
@@ -18,9 +18,11 @@ function makeRobotAccountant() {
 
       counter++;
 
-      return x + y;
+      return firstSummand + secondSummand;
     };
   };
+
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
