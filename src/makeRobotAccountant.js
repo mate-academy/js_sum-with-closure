@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccountant(a) {
+function makeRobotAccountant() {
   let count = 0;
 
   return (firstValue) => {
