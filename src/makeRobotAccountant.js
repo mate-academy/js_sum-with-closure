@@ -8,16 +8,16 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const getSum = (firstVar) => {
+  const getSum = (primalArgument) => {
     count++;
 
     const typeCondition = count < 3 || count % 2 === 1;
 
     if (typeCondition) {
-      return (secondVar) => firstVar + secondVar;
-    } else {
-      return () => 'Bzzz... Error!';
+      return (secondaryArgument) => primalArgument + secondaryArgument;
     }
+
+    return () => 'Bzzz... Error!';
   };
 
   return getSum;
