@@ -9,13 +9,13 @@ function makeRobotAccountant() {
   let operCounter = 0;
 
   return (firstValue) => {
-    return (secondValue) => {
-      operCounter++;
+    operCounter++;
 
-      return (operCounter > 3 && operCounter % 2 === 0)
-        ? 'Bzzz... Error!'
-        : firstValue + secondValue;
-    };
+    const isBroken = operCounter > 3 && operCounter % 2 === 0;
+
+    return (secondValue) => isBroken
+      ? 'Bzzz... Error!'
+      : firstValue + secondValue;
   };
 }
 
