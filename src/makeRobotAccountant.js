@@ -7,13 +7,13 @@
 
 function makeRobotAccountant() {
   // write code here
-  let callCounter = 0;
+  let counter = 0;
 
   return (firstNumber) => {
     return (secondNumber) => {
-      callCounter++;
+      counter++;
 
-      if (callCounter >= 4 && callCounter % 2 === 0) {
+      if (counter >= 4 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       } else {
         return firstNumber + secondNumber;
