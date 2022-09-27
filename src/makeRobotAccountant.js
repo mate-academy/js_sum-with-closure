@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  *
@@ -13,9 +13,9 @@ function makeRobotAccountant() {
       count++;
 
       return (count > 3 && count % 2 === 0)
-      ? 'Bzzz... Error!'
-      : (num1 + num2);
-    }
+        ? 'Bzzz... Error!'
+        : (num1 + num2);
+    };
   };
 }
 
