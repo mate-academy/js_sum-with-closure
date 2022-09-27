@@ -9,19 +9,13 @@ function makeRobotAccountant() {
   const errorMessage = 'Bzzz... Error!';
   let count = 0;
 
-  const robot = (a) => {
+  return (a) => {
     count++;
 
-    return count > 3 && count % 2 === 0
-      ? (b) => {
-        return errorMessage;
-      }
-      : (b) => {
-        return a + b;
-      };
+    return (b) => {
+      return count > 3 && count % 2 === 0 ? errorMessage : a + b;
+    };
   };
-
-  return robot;
 }
 
 module.exports = makeRobotAccountant;
