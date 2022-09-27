@@ -14,9 +14,9 @@ function makeRobotAccountant() {
 
       if (getCallCounter >= 3 && getCallCounter % 2 === 0) {
         return 'Bzzz... Error!';
-      } else {
-        return fistValue + secondValue;
       }
+
+      return fistValue + secondValue;
     };
   };
 }
