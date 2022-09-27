@@ -8,14 +8,16 @@
 function makeRobotAccountant() {
   let getCallCounter = 0;
 
-  return fistValue => secondValue => {
-    getCallCounter++;
+  return (fistValue) => {
+    return (secondValue) => {
+      getCallCounter++;
 
-    if (getCallCounter >= 3 && getCallCounter % 2 === 0) {
-      return 'Bzzz... Error!';
-    } else {
-      return fistValue + secondValue;
-    }
+      if (getCallCounter >= 3 && getCallCounter % 2 === 0) {
+        return 'Bzzz... Error!';
+      } else {
+        return fistValue + secondValue;
+      }
+    };
   };
 }
 
