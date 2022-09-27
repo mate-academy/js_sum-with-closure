@@ -11,9 +11,11 @@ function makeRobotAccountant() {
   return (firstNumber) => {
     countOfCalls++;
 
-    return (secondNumber) => (countOfCalls % 2 === 0 && countOfCalls > 3)
-      ? 'Bzzz... Error!'
-      : firstNumber + secondNumber;
+    return (secondNumber) => (
+      countOfCalls % 2 === 0 && countOfCalls > 3
+        ? 'Bzzz... Error!'
+        : firstNumber + secondNumber
+    );
   };
 }
 
