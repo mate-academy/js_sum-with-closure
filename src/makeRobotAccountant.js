@@ -17,12 +17,6 @@ function makeRobotAccountant() {
       const shouldWeSum = count < 3 || count % 2 === 1;
 
       return shouldWeSum ? first + second : `Bzzz... Error!`;
-
-      // if (shouldWeSum) {
-      //   return first + second;
-      // }
-
-      // return () => `Bzzz... Error!`;
     };
   };
 
