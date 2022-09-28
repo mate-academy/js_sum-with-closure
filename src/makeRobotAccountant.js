@@ -13,13 +13,17 @@ function makeRobotAccountant() {
   const add = (first) => {
     count++;
 
-    if (count < 3 || count % 2 === 1) {
-      return (second) => {
-        return first + second;
-      };
-    }
+    return (second) => {
+      const shouldWeSum = count < 3 || count % 2 === 1;
 
-    return () => `Bzzz... Error!`;
+      return shouldWeSum ? first + second : `Bzzz... Error!`;
+
+      // if (shouldWeSum) {
+      //   return first + second;
+      // }
+
+      // return () => `Bzzz... Error!`;
+    };
   };
 
   return add;
