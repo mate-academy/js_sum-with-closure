@@ -12,7 +12,9 @@ function makeRobotAccountant() {
     return (secondNum) => {
       count++;
 
-      return (count === 2 || count % 2 === 1)
+      const toBreak = (count === 2 || count % 2 === 1);
+
+      return (toBreak)
         ? firstNum + secondNum
         : 'Bzzz... Error!';
     };
