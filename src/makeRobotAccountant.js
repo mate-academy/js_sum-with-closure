@@ -5,18 +5,20 @@
  * @return {function}
  */
 
-function makeRobotAccountant(x) {
+function makeRobotAccountant() {
   let counter = 0;
 
-  return (numberOne) => {
+  return (firstNumber) => {
     counter++;
 
-    return (numberSecond) => {
-      if (counter > 3 && counter % 2 === 0) {
+    const isError = counter > 3 && counter % 2 === 0;
+
+    return (secondNuNumber) => {
+      if (isError) {
         return 'Bzzz... Error!';
       }
 
-      return numberOne + numberSecond;
+      return firstNumber + secondNuNumber;
     };
   };
 }
