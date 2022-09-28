@@ -9,19 +9,19 @@ function makeRobotAccountant() {
   // write code here
   let count = 0;
 
-  function sum(x) {
+  return function(firstNumber) {
     count++;
 
-    return function(y) {
-      if (count > 3 && count % 2 === 0) {
+    const isBroken = count > 3 && count % 2 === 0;
+
+    return function(secondNumber) {
+      if (isBroken) {
         return `Bzzz... Error!`;
       }
 
-      return x + y;
+      return firstNumber + secondNumber;
     };
-  }
-
-  return sum;
+  };
 }
 
 module.exports = makeRobotAccountant;
