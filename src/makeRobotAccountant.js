@@ -9,15 +9,13 @@ function makeRobotAccountant() {
   let callCounter = 0;
 
   return (firstNumber) => {
-    return (secondNumber) => {
-      callCounter++;
+    callCounter++;
 
-      if (callCounter > 3 && callCounter % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
+    const errorCondition = callCounter > 3 && (callCounter % 2 === 0);
 
-      return firstNumber + secondNumber;
-    };
+    return (secondNumber) => errorCondition
+      ? 'Bzzz... Error!'
+      : firstNumber + secondNumber;
   };
 }
 
