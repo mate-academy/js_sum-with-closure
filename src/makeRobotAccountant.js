@@ -5,24 +5,20 @@
  * @return {function}
  */
 
- function makeRobotAccountant() {
+function makeRobotAccountant() {
   let counter = 0;
 
-  function fn(x) {
+  return function(x) {
     counter++;
 
-    function fn2(y) {
+    return function(y) {
       if (counter % 2 || counter <= 3) {
         return x + y;
-      } else {
-        return 'Bzzz... Error!';
       }
-    }
 
-    return fn2;
+      return 'Bzzz... Error!';
+    };
   };
-
-  return fn;
 }
 
 module.exports = makeRobotAccountant;
