@@ -6,7 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let callCounter = 0;
+
+  return (firstNumber) => {
+    callCounter++;
+
+    const errorCondition = callCounter > 3 && (callCounter % 2 === 0);
+
+    return (secondNumber) => errorCondition
+      ? 'Bzzz... Error!'
+      : firstNumber + secondNumber;
+  };
 }
 
 module.exports = makeRobotAccountant;
