@@ -8,12 +8,12 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const d = (a) => {
+  const getSum = (a) => {
     count++;
 
     let sum = a;
 
-    const e = (b) => {
+    const getAugment = (b) => {
       sum += b;
 
       if (count >= 4 && count % 2 === 0) {
@@ -23,10 +23,10 @@ function makeRobotAccountant() {
       return sum;
     };
 
-    return e;
+    return getAugment;
   };
 
-  return d;
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
