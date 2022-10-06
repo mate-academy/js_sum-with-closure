@@ -8,15 +8,13 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const robot = function(value) {
+  const robot = value => {
     count++;
 
-    const sum = function(secondValue) {
-      if (count > 3 && count % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return value + secondValue;
+    const sum = secondValue => {
+      return (count > 3 && count % 2 === 0)
+        ? 'Bzzz... Error!'
+        : value + secondValue;
     };
 
     return sum;
