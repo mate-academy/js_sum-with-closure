@@ -15,17 +15,11 @@ function makeRobotAccountant() {
       return a + b;
     };
 
-    if (count > 3) {
-      switch (count % 2) {
-        case 0:
-          return function() {
-            return 'Bzzz... Error!';
-          };
-
-        case 1:
-          return result;
+    if (count > 3 && count % 2 === 0) {
+      return function() {
+        return 'Bzzz... Error!';
       };
-    }
+    };
 
     return result;
   }
