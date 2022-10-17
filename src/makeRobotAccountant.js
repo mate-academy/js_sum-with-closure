@@ -8,23 +8,17 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const firstStatus = (x) => {
+  return (x) => {
     count++;
 
-    const secondStatus = (y) => {
+    return (y) => {
       if (count >= 4 && count % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      const sum = x + y;
-
-      return sum;
+      return x + y;
     };
-
-    return secondStatus;
   };
-
-  return firstStatus;
 }
 
 module.exports = makeRobotAccountant;
