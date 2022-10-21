@@ -5,22 +5,6 @@
  * @return {function}
  */
 
-// function makeRobotAccountant(firstValue) {
-//   let count = 0;
-
-//   return (secondValue) => {
-//     if (count < 4) {
-//       count++;
-
-//       const sum = firstValue + secondValue;
-
-//       return sum;
-//     }
-
-//     return 'Bzzz... Error!';
-//   };
-// }
-
 function makeRobotAccountant() {
   let amount = 0;
 
@@ -28,7 +12,7 @@ function makeRobotAccountant() {
     return (b) => {
       amount++;
 
-      if ((amount % 2) === 0 && amount > 3) {
+      if (amount % 2 === 0 && amount > 3) {
         return 'Bzzz... Error!';
       }
 
