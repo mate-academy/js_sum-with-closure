@@ -23,5 +23,4 @@ function makeRobotAccountant(x, y) {
   return getSum;
 }
 
-// console.log(makeRobotAccountant(5)(2))
 module.exports = makeRobotAccountant;
