@@ -10,19 +10,14 @@ function makeRobotAccountant() {
 
   return (firstNumber) => {
     return (secondNumber) => {
-      switch (true) {
-        case count <= 3:
-          count++;
+      if (count <= 3 || count % 2 === 1) {
+        count++;
 
-          return firstNumber + secondNumber;
-        case count % 2 === 0:
-          count++;
+        return firstNumber + secondNumber;
+      } else {
+        count++;
 
-          return 'Bzzz... Error!';
-        case count % 2 === 1:
-          count++;
-
-          return firstNumber + secondNumber;
+        return 'Bzzz... Error!';
       }
     };
   };
