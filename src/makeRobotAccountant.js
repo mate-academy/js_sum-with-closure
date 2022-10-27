@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  const adder = (a) => {
+  return (a) => {
     count++;
 
     return (b) => {
@@ -19,8 +19,6 @@ function makeRobotAccountant() {
       }
     };
   };
-
-  return adder;
 }
 
 module.exports = makeRobotAccountant;
