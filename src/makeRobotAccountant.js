@@ -8,19 +8,15 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  function getSum(a) {
+  return a => {
     return b => {
       count++;
 
-      if (count % 2 === 0 && count !== 2) {
-        return 'Bzzz... Error!';
-      }
-
-      return a + b;
+      return (count % 2 === 0 && count !== 2)
+        ? 'Bzzz... Error!'
+        : a + b;
     };
   };
-
-  return getSum;
 }
 
 module.exports = makeRobotAccountant;
