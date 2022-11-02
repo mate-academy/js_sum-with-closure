@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let count = 0;
 
   const addition = (firstNumber) => {
-    const adder = (secondNumber) => {
+    return function(secondNumber) {
       count++;
 
       if (count > 3 && count % 2 === 0) {
@@ -18,8 +18,6 @@ function makeRobotAccountant() {
 
       return firstNumber + secondNumber;
     };
-
-    return adder;
   };
 
   return addition;
