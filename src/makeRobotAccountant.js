@@ -6,19 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let counter = 0;
 
   const bzzOrNotToBzz = (firstNumber) => {
     const helperFunction = (secondNumber) => {
       const sum = firstNumber + secondNumber;
 
-      count++;
+      counter++;
 
-      if (count >= 4 && count % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return sum;
+      return counter >= 4 && counter % 2 === 0
+        ? 'Bzzz... Error!'
+        : sum;
     };
 
     return helperFunction;
