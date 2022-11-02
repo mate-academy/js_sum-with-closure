@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let count = 0;
 
   const firstNumber = (a) => {
-    return function secondNumber(b) {
+    return (b) => {
       count++;
 
       if (count <= 3 || count % 2 !== 0) {
