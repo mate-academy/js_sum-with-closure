@@ -8,9 +8,10 @@
 function makeRobotAccountant() {
   let countCalls = 0;
   const getSum = (a) => {
-    const isEven = countCalls % 2 === 1;
 
     countCalls++;
+
+    const isEven = countCalls % 2 === 0;
 
     return (b) => {
       if (countCalls > 3 && isEven) {
