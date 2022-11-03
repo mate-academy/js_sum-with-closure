@@ -9,7 +9,6 @@ function makeRobotAccountant() {
   let count = 0;
 
   const getSum = (a) => {
-    let sum = a;
 
     count++;
 
