@@ -14,11 +14,9 @@ function makeRobotAccountant() {
     return (b) => {
       counterCalls++;
 
-      if (counterCalls <= 3) {
-        return a + b;
-      }
-
-      return counterCalls % 2 === 0 ? 'Bzzz... Error!' : a + b;
+      return counterCalls % 2 === 0 && counterCalls >= 3
+        ? 'Bzzz... Error!'
+        : a + b;
     };
   };
 }
