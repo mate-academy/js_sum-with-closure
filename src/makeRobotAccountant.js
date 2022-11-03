@@ -10,19 +10,15 @@ function makeRobotAccountant() {
 
   let counterCalls = 0;
 
-  return a => {
-    return b => {
+  return (a) => {
+    return (b) => {
       counterCalls++;
 
       if (counterCalls <= 3) {
         return a + b;
       }
 
-      if (counterCalls % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return a + b;
+      return counterCalls % 2 === 0 ? 'Bzzz... Error!' : a + b;
     };
   };
 }
