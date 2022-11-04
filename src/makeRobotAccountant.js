@@ -7,7 +7,8 @@
 
 function makeRobotAccountant() {
   let countOfOperations = 0;
-  const getSum = (x) => {
+
+  return x => {
     countOfOperations++;
 
     return (y) => {
@@ -18,8 +19,6 @@ function makeRobotAccountant() {
       return x + y;
     };
   };
-
-  return getSum;
 }
 
 module.exports = makeRobotAccountant;
