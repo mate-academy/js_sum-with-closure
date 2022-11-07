@@ -1,12 +1,23 @@
-'use strict';
-
-/**
- *
- * @return {function}
- */
+"use strict";
 
 function makeRobotAccountant() {
-  // write code here
+  let numberOfCalls = 0;
+
+  function getSum(first) {
+    numberOfCalls++;
+
+    function result(second) {
+      if (numberOfCalls <= 3 || numberOfCalls % 2) {
+        return first + second;
+      }
+
+      return 'Bzzz... Error!';
+    };
+
+    return result;
+  };
+
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
