@@ -1,19 +1,18 @@
-'use strict';
-
-/**
- *
- * @return {function}
- */
+"use strict";
 
 function makeRobotAccountant() {
-  let calls = 0;
+  let numberOfCalls = 0;
 
-  const getSum = (first) => {
-    calls++;
+  function getSum(first) {
+    numberOfCalls++;
 
-    const result = (second) => calls <= 3 || calls % 2
-      ? first + second
-      : 'Bzzz... Error!';
+    function result(second) {
+      if (numberOfCalls <= 3 || numberOfCalls % 2) {
+        return first + second;
+      }
+
+      return 'Bzzz... Error!';
+    };
 
     return result;
   };
