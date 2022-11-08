@@ -6,17 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let numcall = 0;
+  let callsLimit = 0;
 
   return (a) => {
     return (b) => {
-      numcall += 1;
+      callsLimit += 1;
 
-      if (numcall < 4) {
+      if (callsLimit <= 3) {
         return a + b;
       }
 
-      if (numcall % 2 === 0) {
+      if (callsLimit % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
