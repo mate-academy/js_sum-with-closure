@@ -21,15 +21,3 @@ function makeRobotAccountant() {
 
 module.exports = makeRobotAccountant;
 
-  /*
-      if (count < 3) {
-        return (a + b);
-      }
-
-      if (count % 2 !== 0) {
-        return (a + b);
-      };
-
-      if (count % 2 === 0) {
-        return 'Bzzz... Error!';
-      };*/
