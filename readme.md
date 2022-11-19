@@ -4,6 +4,10 @@ Accounting, numbers, many numbers. Boring. The solution is to automate! The firs
 Reproduce the behavior of our robots. Create a function `makeRobotAccountant`, the result of which is a function that works on the pattern `getSum (4) (5) === 9`.
 The first 3 calls to this feature work fine. Then all even calls return the string `Bzzz... Error!`, And odd calls the correct value.
 
+Облік, цифри, багато цифр. Нудно. Рішення полягає в автоматизації! Перший робот-бухгалтер зійшов з конвеєра. Не знаю, як у бухгалтерів не розплавляються мізки, але коли наш робот починає складати цифри, він починає сильно горіти і рахує через раз.
+Відтворіть поведінку наших роботів. Створіть функцію `makeRobotAccountant`, результатом якої є функція, що працює за шаблоном `getSum (4) (5) === 9`.
+Перші 3 виклики цієї функції працюють нормально. Потім усі парні виклики повертають рядок `Bzzz... Error!`, а непарні виклики повертають правильне значення.
+
 Example:
 ```
 const getSum = makeRobotAccountant();
