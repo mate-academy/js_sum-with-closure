@@ -9,9 +9,9 @@ function makeRobotAccountant() {
   // write code here
   let counter = 0;
 
-  return (a) => {
+  return function sum(a) {
     return (b) => {
-      ++counter;
+      counter += 1;
 
       if (counter < 3) {
         return a + b;
