@@ -6,14 +6,14 @@
  */
 
 function makeRobotAccountant() {
-  let countCalculate = 0;
+  let countFunctionCall = 0;
 
   return (a) => {
     return (b) => {
-      countCalculate++;
+      countFunctionCall++;
 
-      if (countCalculate < 4
-        || (countCalculate >= 4 && countCalculate % 2 !== 0)) {
+      if (countFunctionCall < 4
+        || (countFunctionCall >= 4 && countFunctionCall % 2 !== 0)) {
         return a + b;
       }
 
