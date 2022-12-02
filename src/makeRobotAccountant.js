@@ -7,6 +7,15 @@
 
 function makeRobotAccountant() {
   // write code here
+  let count = 0;
+
+  return (x) => {
+    count++;
+
+    return (y) => {
+      return (count < 3 || count % 2) ? x + y : 'Bzzz... Error!';
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
