@@ -12,11 +12,11 @@ function makeRobotAccountant() {
     return (number2 = 0) => {
       count++;
 
-      if (count > 3 && count % 2 === 0) {
-        return `Bzzz... Error!`;
-      }
+      const evenCalls = count > 3 && count % 2 === 0;
 
-      return number1 + number2;
+      return evenCalls
+        ? `Bzzz... Error!`
+        : number1 + number2;
     };
   };
 }
