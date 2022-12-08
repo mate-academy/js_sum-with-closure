@@ -6,19 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let counterOfCall = 1;
+  let counterOfCall = 0;
 
   return (firstNum) => {
     return (secondNum) => {
       counterOfCall++;
 
-      const afterThirdCall = (counterOfCall > 3 && counterOfCall % 2 === 0);
-
-      if (counterOfCall <= 3 || afterThirdCall) {
-        return firstNum + secondNum;
+      if (counterOfCall >= 4 && counterOfCall % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
-      return 'Bzzz... Error!';
+      return firstNum + secondNum;
     };
   };
 }
