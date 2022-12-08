@@ -8,10 +8,10 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  const getSum = (a) => {
+  return (a = 0) => {
     counter++;
 
-    return function(b) {
+    return (b = 0) => {
       if (counter > 3 && counter % 2 === 0) {
         return 'Bzzz... Error!';
       }
@@ -19,8 +19,6 @@ function makeRobotAccountant() {
       return a + b;
     };
   };
-
-  return getSum;
 }
 
 module.exports = makeRobotAccountant;
