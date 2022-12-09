@@ -16,9 +16,7 @@ function makeRobotAccountant() {
         return a + b;
       }
 
-      if (counter > 3) {
-        return 'Bzzz... Error!';
-      }
+      return 'Bzzz... Error!';
     };
   };
 }
