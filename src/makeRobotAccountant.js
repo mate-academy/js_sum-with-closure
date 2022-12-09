@@ -6,21 +6,19 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let calls = 0;
 
   return (a) => {
-    // console.log(true)
-
     return (b) => {
-      count++;
+      calls++;
 
       const sum = a + b;
 
-      if (count <= 3) {
+      if (calls <= 3) {
         return sum;
       }
 
-      if (count % 2 === 0) {
+      if (calls % 2 === 0) {
         return `Bzzz... Error!`;
       }
 
