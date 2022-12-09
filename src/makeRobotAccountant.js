@@ -11,14 +11,13 @@ function makeRobotAccountant() {
   return (b) => (a) => {
     counter++;
 
-    const checkCounting = (counter < 3)
+    const checkCounting = (counter < 3
+      || (counter >= 3 && counter % 2 !== 0))
       ? a + b
-      : (counter % 2 !== 0)
-        ? a + b
-        : 'Bzzz... Error!';
+      : 'Bzzz... Error!';
 
     return checkCounting;
-  }
+  };
 };
 
 module.exports = makeRobotAccountant;
