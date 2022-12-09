@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let countForError = 0;
 
   return (a) => (b) => {
-  	countForError++;
+    countForError++;
 
     if (countForError > 3 && countForError % 2 === 0) {
       return 'Bzzz... Error!';
