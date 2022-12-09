@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return a => {
-    return b => {
+  return (a = 0) => {
+    return (b = 0) => {
       count++;
 
       const sum = a + b;
