@@ -8,10 +8,10 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return function(a) {
+  return (a) => {
     count++;
 
-    return function(b) {
+    return (b) => {
       const sum = a + b;
 
       if (count > 3 && count % 2 === 0) {
