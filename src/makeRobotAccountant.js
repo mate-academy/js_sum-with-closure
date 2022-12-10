@@ -12,9 +12,9 @@ function makeRobotAccountant() {
     count++;
 
     return function(x) {
-      const oddCase = x + (y % 2) !== 0;
+      const oddCase = count % 2 === 0;
 
-      return count === 4 && oddCase
+      return count > 3 && oddCase
         ? 'Bzzz... Error!'
         : x + y;
     };
