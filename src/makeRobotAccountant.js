@@ -13,7 +13,8 @@ function makeRobotAccountant() {
 
     return (y) => {
       return (callsCount > 3 && !(callsCount % 2))
-        ? 'Bzzz... Error!' : x + y;
+        ? 'Bzzz... Error!'
+        : x + y;
     };
   };
 }
