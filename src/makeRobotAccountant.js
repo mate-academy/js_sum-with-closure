@@ -11,12 +11,11 @@ function makeRobotAccountant() {
   return (b) => (a) => {
     counter++;
 
-    const checkCounting = (counter < 3
-      || (counter >= 3 && counter % 2 !== 0))
+    const returnValue = counter < 3 || counter % 2 !== 0
       ? a + b
       : 'Bzzz... Error!';
 
-    return checkCounting;
+    return returnValue;
   };
 };
 
