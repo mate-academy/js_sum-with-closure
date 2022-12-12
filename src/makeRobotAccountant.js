@@ -11,15 +11,15 @@ function makeRobotAccountant() {
   const getSum = (a) => {
     count++;
 
-    const result = (b) => {
-      if (count > 3 && count % 2 === 0) {
+    const limit = count > 3 && count % 2 === 0;
+
+    return (b) => {
+      if (limit) {
         return 'Bzzz... Error!';
       }
 
       return a + b;
     };
-
-    return result;
   };
 
   return getSum;
