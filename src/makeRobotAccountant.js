@@ -6,7 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let count = 0;
+
+  return (nmbr1 = 0) => {
+    return (nmbr2 = 0) => {
+      count++;
+
+      const evenCalls = count > 3 && count % 2 === 0;
+
+      return evenCalls
+        ? `Bzzz... Error!`
+        : nmbr1 + nmbr2;
+    };
+  };
 }
+
+// commenting for push
 
 module.exports = makeRobotAccountant;
