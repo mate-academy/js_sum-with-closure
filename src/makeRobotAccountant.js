@@ -8,15 +8,15 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (x) => {
-    count++;
+  return (nmbr1 = 0) => {
+    return (nmbr2 = 0) => {
+      count++;
 
-    return (y) => {
-      if (count < 3 || count % 2 !== 0) {
-        return x + y;
-      }
+      const evenCalls = count > 3 && count % 2 === 0;
 
-      return 'Bzzz... Error!';
+      return evenCalls
+        ? `Bzzz... Error!`
+        : nmbr1 + nmbr2;
     };
   };
 }
