@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     count++;
 
     return (b) => {
-      const shouldBreak = count > 3 || count % 2 === 0;
+      const shouldBreak = count > 3 && count % 2 === 0;
 
       return shouldBreak
         ? 'Bzzz... Error!'
