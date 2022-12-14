@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (num) => {
-    return (secondNum, firstNum = num) => {
+  return (firstNum) => {
+    return (secondNum) => {
       count++;
 
       if (count > 3 && count % 2 === 0) {
@@ -21,4 +21,5 @@ function makeRobotAccountant() {
   };
 }
 
+// return (secondNum, firstNum = num) => {
 module.exports = makeRobotAccountant;
