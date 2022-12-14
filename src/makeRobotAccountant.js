@@ -7,23 +7,18 @@
 
 function makeRobotAccountant() {
   let count = 0;
-  const error = 'Bzzz... Error!';
 
-  const fist = (firtstNum) => {
+  return (a) => {
     count++;
 
-    const second = (lastNum) => {
-      if (count < 3 || count % 2 !== 0) {
-        return firtstNum + lastNum;
-      } else {
-        return error;
-      }
+    return (b) => {
+      const shouldBreak = count > 3 && count % 2 === 0;
+
+      return shouldBreak
+        ? 'Bzzz... Error!'
+        : a + b;
     };
-
-    return second;
   };
-
-  return fist;
 }
 
 module.exports = makeRobotAccountant;
