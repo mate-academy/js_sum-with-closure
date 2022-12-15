@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   let calls = 0;
 
   const getSum = (x) => {
-    return function(y) {
+    return (y) => {
       calls++;
 
       if (calls > 3 && calls % 2 === 0) {
