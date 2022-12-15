@@ -7,25 +7,17 @@
 
 function makeRobotAccountant() {
   // write code here
-  let counter = 3;
-  let anotherCounter = 1;
+  let counter = 0;
 
   return function one(x) {
     return function two(y) {
-      switch (true) {
-        case (counter > 0) :
-          counter--;
+      counter++;
 
-          return x + y;
-        case (counter === 0 && anotherCounter === 1) :
-          anotherCounter--;
-
-          return 'Bzzz... Error!';
-        case (counter === 0 && anotherCounter === 0) :
-          anotherCounter++;
-
-          return x + y;
+      if (counter > 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
       }
+
+      return x + y;
     };
   };
 }
