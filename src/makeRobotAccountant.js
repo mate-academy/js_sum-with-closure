@@ -6,27 +6,19 @@
  */
 
 function makeRobotAccountant() {
-  const errorMessage = 'Bzzz... Error!';
-  let countAttempt = 0;
-  const getSum = (a) => {
-    countAttempt++;
+  let counter = 0;
 
-    if (countAttempt > 3 && countAttempt % 2 === 0) {
-      return () => {
-        return errorMessage;
-      };
-    } else if (countAttempt > 3 && countAttempt % 2 !== 0) {
-      return (b) => {
-        return a + b;
-      };
-    } else {
-      return (b) => {
-        return a + b;
-      };
-    }
+  return (x) => {
+    return (y) => {
+      counter++;
+
+      if (counter > 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
+      } else {
+        return x + y;
+      }
+    };
   };
-
-  return getSum;
 }
 
 module.exports = makeRobotAccountant;
