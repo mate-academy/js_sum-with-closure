@@ -6,19 +6,14 @@
  */
 
 function makeRobotAccountant() {
-  let count = 1;
   const limit = 3;
+  let count = 0;
 
   return (firstNum) => (secondNum) => {
-    if (count <= limit || count % 2 !== 0) {
-      count++;
+    count++;
 
-      return firstNum + secondNum;
-    } else {
-      count++;
-
-      return 'Bzzz... Error!';
-    }
+    return (count <= limit || count % 2 !== 0)
+      ? firstNum + secondNum : 'Bzzz... Error!';
   };
 }
 
