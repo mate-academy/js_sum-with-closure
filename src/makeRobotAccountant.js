@@ -14,13 +14,9 @@ function makeRobotAccountant() {
     return (numbertwo) => {
       const sum = numberOne + numbertwo;
 
-      if (counter > 3) {
-        return counter % 2 === 0
-          ? 'Bzzz... Error!'
-          : sum;
-      }
-
-      return sum;
+      return counter > 3 && counter % 2 === 0
+        ? 'Bzzz... Error!'
+        : sum;
     };
   };
 }
