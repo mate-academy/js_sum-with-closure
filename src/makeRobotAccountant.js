@@ -12,11 +12,7 @@ function makeRobotAccountant() {
     return x => {
       calls++;
 
-      if (calls > 3 && calls % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return y + x;
+      return (calls > 3 && calls % 2 === 0) ? 'Bzzz... Error!' : y + x;
     };
   };
 }
