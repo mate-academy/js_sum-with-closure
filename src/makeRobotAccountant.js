@@ -9,7 +9,9 @@ function makeRobotAccountant() {
   let counter = 0;
 
   return (numberOne) => {
-    const result = (numbertwo) => {
+    counter++;
+
+    return (numbertwo) => {
       const sum = numberOne + numbertwo;
 
       if (counter > 3) {
@@ -20,10 +22,6 @@ function makeRobotAccountant() {
 
       return sum;
     };
-
-    counter++;
-
-    return result;
   };
 }
 
