@@ -6,17 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 3;
+  let counter = 0;
 
   return (x) => {
     return (y) => {
-      counter--;
+      counter++;
 
-      if (counter > 0 || counter % 2 === 0) {
-        return x + y;
-      }
-
-      return 'Bzzz... Error!';
+      return (counter < 3 || counter % 2 !== 0)
+        ? x + y
+        : 'Bzzz... Error!';
     };
   };
 }
