@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     return (y) => {
       counter--;
 
-      if (counter > 0 || counter % 2 === 0) {
+      if (counter > 0 || (counter % 2 === 0)) {
         return x + y;
       }
 
