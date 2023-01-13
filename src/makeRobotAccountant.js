@@ -7,17 +7,17 @@
 
 function makeRobotAccountant() {
   // write code here
-  let leftCalls = 3;
+  let leftCalls = 0;
 
   const calc = (x) => {
     const sum = (y) => {
-      if (leftCalls <= 0) {
-        leftCalls += 1;
+      if (leftCalls >= 3) {
+        leftCalls--;
 
         return `Bzzz... Error!`;
       }
 
-      leftCalls -= 1;
+      leftCalls++;
 
       return x + y;
     };
