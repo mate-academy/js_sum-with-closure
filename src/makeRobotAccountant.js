@@ -6,24 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let callCount = 0;
+  let count = 0;
 
-  const add = (number) => {
-    if (callCount >= 3) {
-      callCount++;
+  return (firstNumber) => {
+    return (secondNumber) => {
+      count++;
 
-      if (callCount % 2 === 0) {
-        return () => 'Bzzz... Error!';
-      }
-
-      return nextNumber => number + nextNumber;
-    }
-    callCount++;
-
-    return nextNumber => number + nextNumber;
+      return (count <= 3 || count % 2 !== 0)
+        ? firstNumber + secondNumber
+        : 'Bzzz... Error!';
+    };
   };
-
-  return add;
-}
+};
 
 module.exports = makeRobotAccountant;
