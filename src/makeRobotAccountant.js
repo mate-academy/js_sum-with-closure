@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     return (y) => {
       sum++;
 
-      if (sum % 2 === 1 && sum > 3) {
+      if (sum % 2 === 0 && sum > 3) {
         return `Bzzz... Error!`;
       }
 
