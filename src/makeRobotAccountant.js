@@ -6,21 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  const accountanting = [];
+  let count = 0;
 
   const getSum = (x) => {
     return function(y) {
-      while (true) {
-        if (accountanting.length <= 2 || accountanting.length % 2 === 0) {
-          accountanting.push(x + y);
-          break;
-        } else {
-          accountanting.push(`Bzzz... Error!`);
-          break;
-        }
+      count++;
+
+      if (count > 3 && count % 2 === 0) {
+        return `Bzzz... Error!`;
       }
 
-      return accountanting[accountanting.length - 1];
+      return x + y;
     };
   };
 
