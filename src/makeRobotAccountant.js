@@ -10,7 +10,7 @@ function makeRobotAccountant() {
 
   return (x) => (y) => {
     if (count === 3) {
-      count = 0;
+      count = 2;
 
       return 'Bzzz... Error!';
     };
