@@ -7,16 +7,16 @@
 
 function makeRobotAccountant() {
   // write code here
-  let callCounter = 4;
+  let callCounter = 0;
 
   const getSum = (a) => {
     const addNumber = (b) => {
-      return callCounter > 0 || callCounter % 2 !== 0
-        ? a + b
-        : 'Bzzz... Error!';
+      return callCounter > 3 && callCounter % 2 === 0
+        ? 'Bzzz... Error!'
+        : a + b;
     };
 
-    callCounter--;
+    callCounter++;
 
     return addNumber;
   };
