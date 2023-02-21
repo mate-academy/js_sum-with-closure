@@ -9,18 +9,14 @@ function makeRobotAccountant() {
   let countOfOperation = 0;
 
   const getSum = (a) => {
-    countOfOperation++;
-
     const add = (b) => {
-      if (countOfOperation <= 3) {
-        return a + b;
+      countOfOperation++;
+
+      if (countOfOperation > 3 && countOfOperation % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
-      if (countOfOperation > 3 && countOfOperation % 2 !== 0) {
-        return a + b;
-      }
-
-      return 'Bzzz... Error!';
+      return a + b;
     };
 
     return add;
