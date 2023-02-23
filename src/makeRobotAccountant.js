@@ -12,10 +12,7 @@ function makeRobotAccountant() {
     return (operand2) => {
       callCounter++;
 
-      if (
-        (callCounter % 2 === 0 && callCounter > 3)
-        || callCounter === 4
-      ) {
+      if (callCounter % 2 === 0 && callCounter > 3) {
         return 'Bzzz... Error!';
       }
 
