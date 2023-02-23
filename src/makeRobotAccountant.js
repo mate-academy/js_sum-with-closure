@@ -12,7 +12,7 @@ function makeRobotAccountant() {
     count++;
 
     return function(paramB) {
-      if (count % 2 === 0 && count > 2) {
+      if (count % 2 === 0 && count > 3) {
         return 'Bzzz... Error!';
       }
 
