@@ -6,7 +6,6 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
   let countCall = 0;
 
   return (num1) => {
