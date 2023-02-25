@@ -12,13 +12,11 @@ function makeRobotAccountant() {
 
     session++;
 
-    if (session > 3 && session % 2 === 0) {
-      return (secondNumber) => {
-        return 'Bzzz... Error!';
-      };
-    }
-
     return (secondNumber) => {
+      if (session > 3 && session % 2 === 0) {
+        return 'Bzzz... Error!';
+      }
+
       result += secondNumber;
 
       return result;
