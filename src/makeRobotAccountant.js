@@ -12,11 +12,7 @@ function makeRobotAccountant() {
     return function(secondNumber) {
       count++;
 
-      if (count < 3) {
-        return firstNumber + secondNumber;
-      }
-
-      if (count % 2 === 1) {
+      if (count % 2 === 1 || count < 3) {
         return firstNumber + secondNumber;
       }
 
