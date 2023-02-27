@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let call = 0;
 
-  return function Sum(x) {
-    return function getSum(y) {
+  return (x) => {
+    return (y) => {
       call++;
 
       if (call > 3 && call % 2 === 0) {
