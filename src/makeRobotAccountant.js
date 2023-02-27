@@ -4,9 +4,22 @@
  *
  * @return {function}
  */
-
 function makeRobotAccountant() {
-  // write code here
+  let count = 1;
+
+  function add(x) {
+    return (y) => {
+      count++;
+
+      if (count > 3 && count % 2) {
+        return 'Bzzz... Error!';
+      }
+
+      return x + y;
+    };
+  }
+
+  return add;
 }
 
 module.exports = makeRobotAccountant;
