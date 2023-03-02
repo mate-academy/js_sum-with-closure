@@ -6,13 +6,12 @@
  */
 
 function makeRobotAccountant() {
-  const sums = [];
+  let sums = 0;
 
   return (x) => (y) => {
-    sums.push(x + y);
+    sums++;
 
-    return sums.length > 2
-    && sums.length % 2 === 0
+    return sums > 2 && sums % 2 === 0
       ? 'Bzzz... Error!'
       : x + y;
   };
