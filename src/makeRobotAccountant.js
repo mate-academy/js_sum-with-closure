@@ -8,11 +8,11 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  const f = (x) => {
-    const g = (y) => {
+  const setFirstNumber = (x) => {
+    const addSecondNumber = (y) => {
       callCount++;
 
-      if (callCount % 4 === 0) {
+      if (callCount > 3 && callCount % 2 === 0) {
         callCount = 0;
 
         return 'Bzzz... Error!';
@@ -21,10 +21,10 @@ function makeRobotAccountant() {
       return x + y;
     };
 
-    return g;
+    return addSecondNumber;
   };
 
-  return f;
+  return setFirstNumber;
 }
 
 module.exports = makeRobotAccountant;
