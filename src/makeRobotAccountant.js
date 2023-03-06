@@ -11,11 +11,11 @@ function makeRobotAccountant() {
     count++;
 
     return function(value2) {
-      if (count % 2 !== 0 || count <= 3) {
-        return value1 + value2;
+      if (count % 2 === 0 && count > 3) {
+        return 'Bzzz... Error!';
       }
 
-      return 'Bzzz... Error!';
+      return value1 + value2;
     };
   };
 }
