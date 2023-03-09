@@ -19,4 +19,4 @@ getSum(1)(1) === 'Bzzz... Error!';
 
 **Read the guideline before start**
 
-[Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
+[Guideline](https://github.com/mnate-academy/js_task-guideline/blob/master/README.md)
