@@ -89,7 +89,7 @@ test('Add two numbers: one is negative 1 + -1 = 0', () => {
 test('Add two numbers: both are negatives -1 + -1 = -2', () => {
   const getSum = makeRobotAccountant();
 
-  const actual = getSum(-1)(-1);
+  const actual = getSum('-1')(-1);
   const expected = -2;
 
   expect(actual)
