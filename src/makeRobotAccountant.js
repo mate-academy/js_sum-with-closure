@@ -8,11 +8,11 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return (num1) => {
+  return (firstNum) => {
     counter++;
 
-    return (num2) => {
-      const sum = num1 + num2;
+    return (secondNum) => {
+      const sum = firstNum + secondNum;
 
       return counter >= 3 && counter % 2 === 0 ? 'Bzzz... Error!' : sum;
     };
