@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  function getSum(num1) {
-    function innerSum(num2) {
+  return (num1) => {
+    return (num2) => {
       count++;
 
       if (count > 3 && count % 2 === 0) {
@@ -17,12 +17,8 @@ function makeRobotAccountant() {
       }
 
       return num1 + num2;
-    }
-
-    return innerSum;
-  }
-
-  return getSum;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
