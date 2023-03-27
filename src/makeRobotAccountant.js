@@ -8,13 +8,13 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  return function(x) {
-    return function(y) {
+  return function(firstNumber) {
+    return function(secondNumber) {
       counter++;
 
       return (counter % 2 === 0 && counter > 3)
         ? 'Bzzz... Error!'
-        : x + y;
+        : firstNumber + secondNumber;
     };
   };
 }
