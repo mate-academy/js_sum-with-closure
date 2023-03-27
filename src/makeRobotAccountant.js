@@ -6,14 +6,14 @@
  */
 
 function makeRobotAccountant(a) {
-  let counter = 0;
+  let counterCall = 0;
 
   return (firstNum) => {
     return (secondNum) => {
-      counter++;
+      counterCall++;
 
-      const isLimitExceeded = counter > 3;
-      const isCallCounterOdd = counter % 2 === 0;
+      const isLimitExceeded = counterCall > 3;
+      const isCallCounterOdd = counterCall % 2 === 0;
 
       return isLimitExceeded && isCallCounterOdd
         ? 'Bzzz... Error!'
