@@ -12,9 +12,9 @@ function makeRobotAccountant() {
     return (secondNum) => {
       count++;
 
-      const overload = count >= 3 && count % 2 === 0;
+      const isOverload = count > 3 && count % 2 === 0;
 
-      if (overload) {
+      if (isOverload) {
         return 'Bzzz... Error!';
       }
 
