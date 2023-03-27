@@ -8,12 +8,12 @@ getSum(5)(6) === 11;
  */
 
 function makeRobotAccountant() {
-  let currentCall = 0;
+  let currentCallCount = 0;
 
   return (a) => {
-    currentCall++;
+    currentCallCount++;
 
-    return (currentCall > 3 && currentCall % 2 !== 1)
+    return (currentCallCount > 3 && currentCallCount % 2 !== 1)
       ? () => 'Bzzz... Error!'
       : b => a + b;
   };
