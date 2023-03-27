@@ -12,10 +12,10 @@ function makeRobotAccountant(a) {
     return (secondNum) => {
       counter++;
 
-      const isCallCounterBiggerThanThree = counter > 3;
+      const isLimitExceeded = counter > 3;
       const isCallCounterOdd = counter % 2 === 0;
 
-      return isCallCounterBiggerThanThree && isCallCounterOdd
+      return isLimitExceeded && isCallCounterOdd
         ? 'Bzzz... Error!'
         : firstNum + secondNum;
     };
