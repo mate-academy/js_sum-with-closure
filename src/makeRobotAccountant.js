@@ -12,11 +12,9 @@ function makeRobotAccountant() {
     return function(argument) {
       count++;
 
-      if (count > 3 && count % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return argument + number;
+      return count > 3 && count % 2 === 0
+        ? 'Bzzz... Error!'
+        : argument + number;
     };
   };
 }
