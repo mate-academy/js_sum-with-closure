@@ -12,7 +12,7 @@ function makeRobotAccountant() {
   const func = function(first) {
     const secPar = function(sec) {
       counter++;
-      return counter % 2 === 0 ? 'Bzzz... Error' : first + sec;
+      return counter % 2 === 0 ? 'Bzzz... Error!' : first + sec;
     }
 
     return secPar;
