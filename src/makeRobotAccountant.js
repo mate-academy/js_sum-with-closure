@@ -1,10 +1,5 @@
 'use strict';
 
-/**
- *
- * @return {function}
- */
-
 function makeRobotAccountant() {
   let count = -1;
 
