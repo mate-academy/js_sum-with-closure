@@ -12,13 +12,13 @@ function makeRobotAccountant() {
     return function(y) {
       i++;
 
-      if (i <= 3) {
-        return x + y;
-      } else if (i % 2 !== 0) {
-        return x + y;
-      } else {
-        return 'Bzzz... Error!';
+      const result = x + y;
+
+      if (i <= 3 || i % 2 !== 0) {
+        return result;
       }
+
+      return 'Bzzz... Error!';
     };
   };
 }
