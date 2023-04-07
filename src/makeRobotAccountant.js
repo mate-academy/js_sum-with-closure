@@ -9,9 +9,9 @@ function makeRobotAccountant() {
   let sumCallCounter = 0;
 
   function sumOperation(firstNumber) {
-    sumCallCounter += 1;
+    sumCallCounter++;
 
-    function AddNumbers(secondNumber) {
+    function addNumbers(secondNumber) {
       if (sumCallCounter > 3 && sumCallCounter % 2 === 0) {
         return 'Bzzz... Error!';
       } else {
@@ -19,7 +19,7 @@ function makeRobotAccountant() {
       }
     }
 
-    return AddNumbers;
+    return addNumbers;
   }
 
   return sumOperation;
