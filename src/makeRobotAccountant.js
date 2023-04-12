@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  const addNumbers = (num1) => (num2) => {
+  const getSum = (num1) => (num2) => {
     callCount++;
 
     const isEvenCall = callCount % 2 === 0;
@@ -17,7 +17,7 @@ function makeRobotAccountant() {
     return isInvalidCall ? 'Bzzz... Error!' : num1 + num2;
   };
 
-  return addNumbers;
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
