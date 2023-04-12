@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccountant(arg) {
+function makeRobotAccountant() {
   let callsCounter = 0;
 
   const getSum = (a) => {
