@@ -14,7 +14,7 @@ function makeRobotAccountant() {
 
       if (count < 3 || count % 2 !== 0) {
         return x + y;
-      } else if (count % 2 === 0) {
+      } else {
         return 'Bzzz... Error!';
       };
     };
