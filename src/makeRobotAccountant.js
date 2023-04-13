@@ -15,11 +15,7 @@ function makeRobotAccountant() {
 
       callsCount++;
 
-      if (callsCount <= 3) {
-        return sum;
-      }
-
-      if (callsCount % 2) {
+      if (callsCount <= 3 || callsCount % 2) {
         return sum;
       }
 
