@@ -8,12 +8,12 @@
 function makeRobotAccountant() {
   let callsCount = 0;
 
-  function callsCounter(summand1) {
+  function callsCounter(firstSummand) {
     callsCount++;
 
-    function sum(summand2) {
+    function sum(secoundSummand) {
       if (callsCount <= 3 || callsCount % 2 !== 0) {
-        return summand1 + summand2;
+        return firstSummand + secoundSummand;
       }
 
       return 'Bzzz... Error!';
