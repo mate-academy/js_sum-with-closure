@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let counter = 0;
 
-  function f(a) {
+  function getSumOrError(a) {
     ++counter;
 
     return function(b) {
@@ -24,7 +24,7 @@ function makeRobotAccountant() {
     };
   }
 
-  return f;
+  return getSumOrError;
 }
 
 module.exports = makeRobotAccountant;
