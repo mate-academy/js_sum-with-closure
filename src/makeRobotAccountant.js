@@ -17,9 +17,11 @@ function makeRobotAccountant() {
     }
 
     return function(y) {
-      if (callsCount <= MAX_CALLS) {
+      if (callsCount <= MAX_CALLS || callsCount % 2 !== 0) {
         return x + y;
       }
+      
+      return 'Bzzz... Error!';
 
       return isEven
         ? x + y
