@@ -10,11 +10,7 @@ function makeRobotAccountant() {
   let callsCount = 0;
   let isEven = false;
   const robotAccountant = (x = 0) => {
-    isEven = !isEven;
-
-    if (callsCount <= MAX_CALLS) {
-      callsCount++;
-    }
+    callsCount++;
 
     return function(y) {
       if (callsCount <= MAX_CALLS || callsCount % 2 !== 0) {
