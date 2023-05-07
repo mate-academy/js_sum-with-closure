@@ -10,22 +10,16 @@ function makeRobotAccountant() {
   let sum = 0;
 
   const getSum = (a) => {
-    const result = (b) => {
+    return function(b) {
       count++;
       sum = a + b;
 
-      if (count < 4) {
-        return sum;
-      }
-
       if (count % 2 === 0 && count > 3) {
         return 'Bzzz... Error!';
-      } else {
-        return sum;
-      }
-    };
+      };
 
-    return result;
+      return sum;
+    };
   };
 
   return getSum;
