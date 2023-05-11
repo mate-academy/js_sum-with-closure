@@ -11,13 +11,13 @@ function makeRobotAccountant() {
   const errorCheck = (firstNumber) => {
     counter++;
 
-    const adding = (secondNumber) => {
-      return counter <= 3 || counter % 2 !== 0
-        ? firstNumber + secondNumber
-        : 'Bzzz... Error!';
-    };
+    return function(seconNumber) {
+      if (counter > 3 && counter % 2 === 0) {
+        return 'Bzzz... Error!';
+      };
 
-    return adding;
+      return firstNumber + seconNumber;
+    };
   };
 
   return errorCheck;
