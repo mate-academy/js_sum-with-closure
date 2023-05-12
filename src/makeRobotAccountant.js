@@ -9,11 +9,8 @@ function makeRobotAccountant() {
   let count = 1;
 
   const addNum = x => {
-    if (x === -Infinity) {
-      return Infinity;
-    }
 
-    const sumFunc = (y) => {
+    const getSum = (y) => {
       if (count > 3 && count % 2 === 0) {
         count++;
 
@@ -24,7 +21,7 @@ function makeRobotAccountant() {
       return x + y;
     };
 
-    return sumFunc;
+    return getSum;
   };
 
   return addNum;
