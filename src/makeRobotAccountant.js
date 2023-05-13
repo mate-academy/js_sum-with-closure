@@ -10,19 +10,10 @@ function makeRobotAccountant() {
 
   return function getSum(a) {
     function x(b) {
-      let sum = 0;
+      const sum = a + b;
 
-      sum += a + b;
-
-      if (times <= 3) {
-        return sum;
-      }
-
-      if (times % 2 !== 0 && times >= 5) {
-        return sum;
-      } else {
-        return 'Bzzz... Error!';
-      }
+      return times <= 3 || (times % 2 !== 0 && times >= 5) ? sum
+        : 'Bzzz... Error!';
     };
 
     times++;
