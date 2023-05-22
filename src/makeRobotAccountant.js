@@ -8,10 +8,10 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  function sum(x) {
-    count++;
-
+  function getSum(x) {
     return function(y) {
+      count++;
+
       if (count % 2 === 0 && count > 3) {
         return 'Bzzz... Error!';
       }
@@ -20,7 +20,7 @@ function makeRobotAccountant() {
     };
   }
 
-  return sum;
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
