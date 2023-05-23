@@ -13,9 +13,7 @@ function makeRobotAccountant() {
       countOperations++;
 
       if (countOperations <= 3 || countOperations % 2 !== 0) {
-        const result = firstNumber + secondNumber;
-
-        return result;
+        return firstNumber + secondNumber;
       }
 
       return 'Bzzz... Error!';
