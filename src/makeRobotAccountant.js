@@ -8,7 +8,7 @@
 function makeRobotAccountant() {
   let callCounter = 0;
 
-  return (firstSummand) =>
+  return firstSummand =>
     secondSummand => {
       callCounter++;
 
