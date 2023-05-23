@@ -4,7 +4,7 @@ Accounting, numbers, many numbers. Boring. The solution is to automate! The firs
 Reproduce the behavior of our robots. Create a function `makeRobotAccountant`, the result of which is a function that works on the pattern `getSum (4) (5) === 9`.
 The first 3 calls to this feature work fine. Then all even calls return the string `Bzzz... Error!`, And odd calls the correct value.
 
-Example:
+Example:123
 ```
 const getSum = makeRobotAccountant();
 getSum(5)(6) === 11;
