@@ -7,11 +7,8 @@
 
 function makeRobotAccountant() {
   let counter = 0;
-  let sum;
 
   return (a) => {
-    sum = 0;
-
     return (b) => {
       counter++;
 
@@ -19,9 +16,7 @@ function makeRobotAccountant() {
         return 'Bzzz... Error!';
       }
 
-      sum = a + b;
-
-      return sum;
+      return a + b;
     };
   };
 }
