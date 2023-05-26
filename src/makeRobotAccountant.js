@@ -6,7 +6,7 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 1;
+  let counter = 0;
 
   return function(x) {
     return function(y) {
