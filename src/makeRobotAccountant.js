@@ -9,9 +9,9 @@ function makeRobotAccountant() {
   let callCount = 0;
 
   const getSum = (firstNumber) => {
-    callCount++;
-
     return (secondNumber) => {
+      callCount++;
+
       const isEvenCall = callCount % 2 === 0;
       const isInvalidCall = isEvenCall && callCount > 3;
 
