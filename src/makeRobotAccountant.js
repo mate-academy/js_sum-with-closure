@@ -6,18 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  const successCalls = 3;
-  let attempts = 0;
+  let totalCalls = 0;
 
-  return (num1) => {
-    return (num2) => {
-      attempts++;
+  return (a) => {
+    return (b) => {
+      totalCalls++;
 
-      if (attempts > successCalls && attempts % 2 === 0) {
+      if (totalCalls > 3 && totalCalls % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return num1 + num2;
+      return a + b;
     };
   };
 }
