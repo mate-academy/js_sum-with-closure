@@ -5,7 +5,7 @@
  * @return {function}
  */
 
-function makeRobotAccountant(number) {
+function makeRobotAccountant() {
   let countOfCalls = 0;
 
   return a => b => {
