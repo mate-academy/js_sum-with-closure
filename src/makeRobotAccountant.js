@@ -6,22 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  let callCounter = 1;
+  let accountantCounter = 0;
 
-  const getSum = (num) => {
-    return (sum) => {
-      if (callCounter >= 4 && callCounter % 2 === 0) {
-        callCounter++;
+  const robotAccountant = (number1) => {
+    return (number2) => {
+      accountantCounter++;
 
+      if (accountantCounter >= 4 && accountantCounter % 2 === 0) {
         return 'Bzzz... Error!';
       }
-      callCounter++;
 
-      return sum + num;
+      return number2 + number1;
     };
   };
 
-  return getSum;
+  return robotAccountant;
 }
 
 module.exports = makeRobotAccountant;
