@@ -9,9 +9,9 @@ function makeRobotAccountant() {
   let amount = 0;
 
   return (num) => {
-    amount++;
-
     return (num1) => {
+      amount++;
+
       if (amount > 3 && amount % 2 === 0) {
         return 'Bzzz... Error!';
       } else {
