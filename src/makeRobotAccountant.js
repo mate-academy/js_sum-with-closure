@@ -13,9 +13,6 @@ function makeRobotAccountant() {
       counter++;
 
       switch (true) {
-        case (counter < 3):
-          return a + b;
-
         case (counter >= 3 && counter % 2 === 0):
           return 'Bzzz... Error!';
 
