@@ -8,14 +8,14 @@
 function makeRobotAccountant() {
   let callsCounter = 0;
 
-  const getSum = (x) => {
+  const getSum = (x) => (y) => {
     callsCounter++;
 
     if (callsCounter >= 4 && callsCounter % 2 === 0) {
-      return () => 'Bzzz... Error!';
+      return 'Bzzz... Error!';
     }
 
-    return (y) => x + y;
+    return x + y;
   };
 
   return getSum;
