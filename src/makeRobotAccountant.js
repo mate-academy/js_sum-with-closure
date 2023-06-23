@@ -6,26 +6,16 @@
  */
 
 function makeRobotAccountant() {
-  let callsLeft = 3;
-  let isEvenCall = true;
+  let count = 0;
 
   return (firstNum) => {
-    const sumFunc = (secondNum) => firstNum + secondNum;
+    count += 1;
 
-    if (callsLeft) {
-      callsLeft -= 1;
-
-      return (secondNum) => sumFunc(secondNum);
-    }
-
-    if (isEvenCall) {
-      isEvenCall = false;
-
+    if (count > 3 && count % 2 === 0) {
       return () => 'Bzzz... Error!';
     }
-    isEvenCall = true;
 
-    return (secondNum) => sumFunc(secondNum);
+    return (secondNum) => firstNum + secondNum;
   };
 }
 
