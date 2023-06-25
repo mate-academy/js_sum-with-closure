@@ -6,7 +6,15 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let count = 0;
+
+  function getSum(a) {
+    count++;
+
+    return (b) => (count > 3 && count % 2 === 0) ? 'Bzzz... Error!' : a + b;
+  };
+
+  return getSum;
 }
 
 module.exports = makeRobotAccountant;
