@@ -12,7 +12,7 @@ function makeRobotAccountant() {
   function getSum(firstOperator) {
     call++;
 
-    return (secondOperator) => (call > WORK_FINE_CALLS && call % 2 === 0)
+    return (secondOperator) => (call > WORK_FINE_CALLS && !(call % 2 ))
       ? 'Bzzz... Error!'
       : firstOperator + secondOperator;
   };
