@@ -15,12 +15,10 @@ function makeRobotAccountant() {
       if (launches > 3) {
         if (launches % 2 === 0) {
           return 'Bzzz... Error!';
-        } else {
-          return a + b;
         }
-      } else {
-        return a + b;
       }
+
+      return a + b;
     };
   };
 }
