@@ -7,12 +7,12 @@
 
 function makeRobotAccountant() {
   let result = 0;
-  let count = 0;
+  let count = 1;
 
   function getSum(x) {
     function getSumy(y) {
-      if (count >= 3) {
-        count = 0;
+      if (count > 3 && count % 2 === 0) {
+        count++;
 
         return 'Bzzz... Error!';
       }
