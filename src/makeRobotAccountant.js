@@ -1,24 +1,17 @@
 'use strict';
 
-/**
- *
- * @return {function}
- */
-
 function makeRobotAccountant() {
-  let count = 0;
+  let callsCount = 0;
 
-  return function(a) {
-    return function(b) {
-      count++;
+  return function(firstOperand) {
+    callsCount++;
 
-      if (count <= 3 || count % 2 === 1) {
-        return a + b;
-      } else {
-        return 'Bzzz... Error!';
-      }
+    if (callsCount <= 3 || callsCount % 2 === 1) {
+      return (secondOperand) => firstOperand + secondOperand;
     };
+
+    return () => 'Bzzz... Error!';
   };
-}
+};
 
 module.exports = makeRobotAccountant;
