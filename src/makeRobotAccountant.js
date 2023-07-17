@@ -7,15 +7,15 @@
 
 function makeRobotAccountant() {
   // write code here
-  let firstNumber = 1;
+  let counter = 1;
 
   return (a) => {
-    const currentNumber = firstNumber;
+    const currentCounter = counter;
 
     return (b) => {
-      firstNumber++;
+      counter++;
 
-      if (currentNumber <= 3 || currentNumber % 2 === 1) {
+      if (currentCounter <= 3 || currentCounter % 2 === 1) {
         return a + b;
       }
 
