@@ -8,15 +8,17 @@
 function makeRobotAccountant() {
   let count = 0;
 
-  return (a) => {
-    return (b) => {
+  return (firstParam) => {
+    return (secondParam) => {
       count++;
+
+      const sum = firstParam + secondParam;
 
       if (count > 3 && count % 2 === 0) {
         return ('Bzzz... Error!');
       }
 
-      return a + b;
+      return sum;
     };
   };
 }
