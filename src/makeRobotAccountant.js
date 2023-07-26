@@ -9,17 +9,17 @@ function makeRobotAccountant() {
   let callsCount = 0;
 
   const sum = (a) => {
-    callsCount++;
+    return (b) {
+      callsCount++;
 
-    return (b) => {
-      if (callsCount > 3 && callsCount % 2 === 0) {
-        return 'Bzzz... Error!';
-      } else {
+      if (callsCount <= 3 || callsCount % 2 === 0) {
         return a + b;
+      } else {
+        return 'Bzzz... Error!';
       }
     };
   };
-
+  
   return sum;
 }
 
