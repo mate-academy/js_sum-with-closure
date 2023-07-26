@@ -6,19 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let callsCount = 0;
 
-  return function(a) {
-    return function(b) {
-      count++;
+  const sum = (a) => {
+    return (b) {
+      callsCount++;
 
-      if (count <= 3 || count % 2 === 1) {
+      if (callsCount <= 3 || callsCount % 2 === 0) {
         return a + b;
       } else {
         return 'Bzzz... Error!';
       }
     };
   };
+  
+  return sum;
 }
 
 module.exports = makeRobotAccountant;
