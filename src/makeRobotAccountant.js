@@ -11,21 +11,21 @@ function makeRobotAccountant() {
   function getSumInner(num1) {
     counter++;
 
-    if (counter < 4) {
-      return function(num2) {
-        return num1 + num2;
-      };
-    } else {
+    if (counter > 3) {
       if (counter % 2 === 1) {
         return function(num2) {
           return num1 + num2;
         };
-      } else {
-        return function() {
-          return 'Bzzz... Error!';
-        };
       }
+
+      return function() {
+        return 'Bzzz... Error!';
+      };
     }
+
+    return function(num2) {
+      return num1 + num2;
+    };
   }
 
   return getSumInner;
