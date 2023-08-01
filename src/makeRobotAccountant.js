@@ -7,14 +7,8 @@
 
 function makeRobotAccountant() {
   let callCount = 0;
-
-  function sum(a, b) {
-    return a + b;
-  }
-
-  function error() {
-    return 'Bzzz... Error!';
-  }
+  const sum = (a, b) => a + b;
+  const error = () => 'Bzzz... Error!';
 
   function getSum(a) {
     callCount++;
