@@ -8,31 +8,27 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  function add(a, b) {
+  function sum(a, b) {
     return a + b;
   }
 
-  function errorMessage() {
+  function error() {
     return 'Bzzz... Error!';
   }
 
   return function getSum(a) {
+    callCount++;
+
     if (callCount < 3) {
       return function(b) {
-        callCount++;
-
-        return add(a, b);
+        return sum(a, b);
       };
     } else if (callCount % 2 === 0) {
-      callCount++;
-
       return function(b) {
-        return add(a, b);
+        return sum(a, b);
       };
     } else {
-      callCount++;
-      
-      return errorMessage;
+      return error;
     }
   };
 }

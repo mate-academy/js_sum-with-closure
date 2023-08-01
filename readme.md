@@ -18,13 +18,5 @@ getSum(1)(1) === 'Bzzz... Error!';
 ```
 
 **Read the guideline before start**
-OK I know, but I think it's better to read the guideline before start
-OK but I think it's better to read the guideline before start
-but I think it's better to read the guideline before start
-I think it's better to read the guideline before start
-OK but I did it
-but I did it
-but did it
-did it
-it did
+
 [Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
