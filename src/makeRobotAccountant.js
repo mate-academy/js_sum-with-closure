@@ -8,13 +8,12 @@
 function makeRobotAccountant() {
   let callCount = 0;
   const sum = (a, b) => a + b;
-  const error = () => 'Bzzz... Error!';
 
   function getSum(a) {
     callCount++;
 
     if (callCount > 3 && callCount % 2 === 0) {
-      return error;
+      return () => 'Bzzz... Error!';
     } else {
       return function(b) {
         return sum(a, b);
