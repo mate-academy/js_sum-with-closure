@@ -9,7 +9,7 @@ function makeRobotAccountant() {
   // write code here
   let count = 0;
 
-  function getSum(a) {
+  const callSum = function getSum(a) {
     count++;
 
     if ((count > 3) && (count % 2 === 0)) {
@@ -19,9 +19,9 @@ function makeRobotAccountant() {
         return a + b;
       };
     }
-  }
+  };
 
-  return getSum;
+  return callSum;
 }
 
 module.exports = makeRobotAccountant;
