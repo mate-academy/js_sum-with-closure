@@ -9,15 +9,9 @@ function makeRobotAccountant() {
   let count = 0;
 
   return function getSum(a) {
-    return function(b) {
-      count++;
+    count++;
 
-      if (count > 3 && count % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
-
-      return a + b;
-    };
+    return b => count > 3 && count % 2 === 0 ? 'Bzzz... Error!' : a + b;
   };
 }
 
