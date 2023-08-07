@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  *
@@ -7,19 +7,17 @@
 
 function makeRobotAccountant() {
   let callCount = 0;
-  const errorMessage = "Bzzz... Error!";
+  const errorMessage = 'Bzzz... Error!';
 
   function getSum(a) {
-    return function (b) {
+    return function(b) {
       callCount++;
 
-      if (callCount <= 3) {
-        return a + b;
-      } else if (callCount % 2 === 0) {
-        return errorMessage;
-      } else {
+      if (callCount <= 3 || (callCount > 3 && callCount % 2 !== 0)) {
         return a + b;
       }
+
+      return errorMessage;
     };
   }
 
