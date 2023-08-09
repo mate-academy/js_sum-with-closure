@@ -6,19 +6,16 @@
  */
 
 function makeRobotAccountant() {
-  let countIteration = 1;
+  let countIteration = 0;
 
-  return a => {
-    return b => {
-      if (countIteration > 3 && countIteration % 2 === 0) {
-        countIteration++;
+  return a => b => {
+    countIteration++;
 
-        return 'Bzzz... Error!';
-      }
-      countIteration++;
+    if (countIteration > 3 && countIteration % 2 === 0) {
+      return 'Bzzz... Error!';
+    }
 
-      return a + b;
-    };
+    return a + b;
   };
 }
 
