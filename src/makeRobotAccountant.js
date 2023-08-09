@@ -7,22 +7,15 @@
 
 function makeRobotAccountant() {
   let counter = 0;
-  let countAfterThree = 0;
 
   return function getSum(a) {
-    if (counter !== 3) {
-      counter++;
+    counter++;
 
+    if (counter <= 3) {
       return (b) => a + b;
-    }
-
-    if (countAfterThree === 0) {
-      countAfterThree++;
-
+    } else if (counter % 2 === 0) {
       return () => 'Bzzz... Error!';
     } else {
-      countAfterThree = 0;
-
       return b => a + b;
     }
   };
