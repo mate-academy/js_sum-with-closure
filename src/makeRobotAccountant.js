@@ -6,14 +6,14 @@
  */
 
 function makeRobotAccountant() {
-  let caunt = 0;
+  let count = 0;
 
   return function(a) {
     return function(b) {
-      caunt++;
+      count++;
 
-      if (caunt > 3) {
-        return caunt % 2 === 0 ? 'Bzzz... Error!' : a + b;
+      if (count > 3 && count % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
       return a + b;
