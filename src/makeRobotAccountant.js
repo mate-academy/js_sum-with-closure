@@ -6,17 +6,18 @@
  */
 
 function makeRobotAccountant() {
+  const ERROR_MESSAGE = 'Bzzz... Error!';
   let counter = 0;
 
-  return function getSum(num1) {
+  return function getSum(x) {
     counter++;
 
     const isEvenCall = counter % 2 === 0;
-    const isGreaterThen3 = counter > 3;
+    const isGreaterThenThree = counter > 3;
 
-    return (num2) => (isEvenCall && isGreaterThen3)
-      ? 'Bzzz... Error!'
-      : num1 + num2;
+    return (y) => (isEvenCall && isGreaterThenThree)
+      ? ERROR_MESSAGE
+      : x + y;
   };
 };
 
