@@ -7,18 +7,18 @@
 
 function makeRobotAccountant() {
   const CORRECT_COUNT_WORKINGS = 3;
-  let callCount = 1;
+  const ERROR_MESSAGE = 'Bzzz... Error!';
+  let callCount = 0;
 
   return (firstNum) => (secondNum) => {
+    callCount++;
+
     const isEven = callCount % 2 === 0;
     const isBroken = callCount > CORRECT_COUNT_WORKINGS && isEven;
 
     if (isBroken) {
-      callCount++;
-
-      return 'Bzzz... Error!';
+      return ERROR_MESSAGE;
     }
-    callCount++;
 
     return firstNum + secondNum;
   };
