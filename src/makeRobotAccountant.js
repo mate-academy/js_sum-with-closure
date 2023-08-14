@@ -8,28 +8,22 @@ function makeRobotAccountant() {
   const FINE_CALLS = 3;
   const ERROR_MSG = 'Bzzz... Error!';
 
-  let numberOfCalls = 0;
+  let callCount = 0;
 
-  return (firstOperand) => {
-    return (secondOperand) => {
-      numberOfCalls += 1;
+  return (firstNumber) => {
+    return (secondNumber) => {
+      callCount += 1;
 
-      if (numberOfCalls > FINE_CALLS && isEven(numberOfCalls)) {
+      const isEvenCall = callCount % 2 === 0;
+      const isError = callCount > FINE_CALLS && isEvenCall;
+
+      if (isError) {
         return ERROR_MSG;
       }
 
-      return firstOperand + secondOperand;
+      return firstNumber + secondNumber;
     };
   };
-
-  /**
-   * @param {number} number
-   *
-   * @return {boolean}
-   */
-  function isEven(number) {
-    return number % 2 === 0;
-  }
 }
 
 module.exports = makeRobotAccountant;
