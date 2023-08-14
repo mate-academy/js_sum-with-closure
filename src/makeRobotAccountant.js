@@ -6,20 +6,22 @@
  */
 
 function makeRobotAccountant() {
-  let CALLS_COUNT = 0;
+  let callsCount = 0;
   const MAX_CALLS_COUNT = 3;
-
   const ERROR_MESSAGE = 'Bzzz... Error!';
 
-  function getSum(num1) {
-    CALLS_COUNT++;
+  function getSum(x) {
+    callsCount++;
 
-    return function(num2) {
-      if ((CALLS_COUNT > MAX_CALLS_COUNT) && (CALLS_COUNT % 2 === 0)) {
+    return function(y) {
+      const isExcessCalls = (callsCount > MAX_CALLS_COUNT)
+        && (callsCount % 2 === 0);
+
+      if (isExcessCalls) {
         return ERROR_MESSAGE;
       }
 
-      return num1 + num2;
+      return x + y;
     };
   }
 
