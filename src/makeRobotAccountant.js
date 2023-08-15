@@ -6,16 +6,16 @@
  */
 
 function makeRobotAccountant() {
-  let robotAccountantsCreated = 0;
+  let callsAmount = 0;
 
   return number1 =>
     number2 => {
-      robotAccountantsCreated++;
+      callsAmount++;
 
-      const makerErrorCondition = robotAccountantsCreated > 3
-        && robotAccountantsCreated % 2 === 0;
+      const isError = callsAmount > 3
+        && callsAmount % 2 === 0;
 
-      return makerErrorCondition
+      return isError
         ? 'Bzzz... Error!'
         : number1 + number2;
     };
