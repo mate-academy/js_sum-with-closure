@@ -7,17 +7,21 @@
 
 function makeRobotAccountant() {
   const ERROR_MESSAGE = 'Bzzz... Error!';
+  const FINE_CALLS = 3;
   let numberOfOperations = 0;
 
-  return function getSum(number1) {
+  return function(x) {
     numberOfOperations++;
 
-    return function(number2) {
-      if (numberOfOperations > 3 && numberOfOperations % 2 === 0) {
+    return function(y) {
+      const isEvenCall = numberOfOperations % 2 === 0;
+      const isError = numberOfOperations > FINE_CALLS && isEvenCall;
+
+      if (isError) {
         return ERROR_MESSAGE;
       }
 
-      return number1 + number2;
+      return x + y;
     };
   };
 }
