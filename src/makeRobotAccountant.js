@@ -6,19 +6,19 @@
  */
 
 function makeRobotAccountant() {
-  let sum = 0;
-  const history = [];
+  const ERROR_MESSAGE = 'Bzzz... Error!';
+  const COUNT_ITERATIONS = 3;
+  let countIteration = 0;
 
   return (a) => {
     return (b) => {
-      sum = a + b;
-      history.push(sum);
+      countIteration++;
 
-      if (history.length > 3 && history.length % 2 === 0) {
-        return 'Bzzz... Error!';
+      if (countIteration > COUNT_ITERATIONS && countIteration % 2 === 0) {
+        return ERROR_MESSAGE;
       }
 
-      return sum;
+      return a + b;
     };
   };
 }
