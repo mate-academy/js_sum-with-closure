@@ -4,18 +4,21 @@
  *
  * @return {function}
  */
+const ERROR_MESSAGE = 'Bzzz... Error!';
+const USAGE_LIMIT = 3;
 
 function makeRobotAccountant() {
   let count = 0;
 
-  const isUsageOverLimit = () => count > 3;
-  const isUsageCountEven = () => count % 2 === 0;
-
   return a => {
     count++;
 
-    return b => isUsageOverLimit() && isUsageCountEven()
-      ? 'Bzzz... Error!'
+    const isUsageOverLimit = count > USAGE_LIMIT;
+    const isUsageCountEven = count % 2 === 0;
+    const isError = isUsageOverLimit && isUsageCountEven;
+
+    return b => isError
+      ? ERROR_MESSAGE
       : a + b;
   };
 }
