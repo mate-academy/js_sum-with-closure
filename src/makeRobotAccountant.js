@@ -6,14 +6,19 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 1;
+  let counter = 0;
+
+  const errorMessage = 'Bzzz... Error!';
 
   return (num1) => {
-    const messageOrNum = counter > 3 && counter % 2 === 0
-      ? message => 'Bzzz... Error!'
-      : num2 => num1 + num2;
-
     counter++;
+
+    const isMoreThen3 = counter > 3;
+    const isOdd = counter % 2 === 0;
+
+    const messageOrNum = isMoreThen3 && isOdd
+      ? message => errorMessage
+      : num2 => num1 + num2;
 
     return messageOrNum;
   };
