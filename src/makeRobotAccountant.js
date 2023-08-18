@@ -7,6 +7,7 @@
 
 function makeRobotAccountant() {
   const MAX_ATTEMPTS_NUMB = 3;
+  const ERROR_MESSAGE = 'Bzzz... Error!';
   let callsCount = 0;
 
   return (firstNumber) => {
@@ -14,7 +15,7 @@ function makeRobotAccountant() {
       callsCount++;
 
       if (callsCount > MAX_ATTEMPTS_NUMB && callsCount % 2 === 0) {
-        return 'Bzzz... Error!';
+        return ERROR_MESSAGE;
       }
 
       return secondNumber + firstNumber;
