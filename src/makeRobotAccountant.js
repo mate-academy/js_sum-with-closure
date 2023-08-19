@@ -7,23 +7,18 @@
 
 function makeRobotAccountant() {
   let count = 0;
+  const errorMessage = 'Bzzz... Error!';
 
-  return function(x) {
-    count++;
+  return (firstArg) => {
+    return (secondArg) => {
+      count++;
 
-    if (count <= 3) {
-      return function(y) {
-        return x + y;
-      };
-    } else if (count % 2 === 0) {
-      return function(y) {
-        return 'Bzzz... Error!';
-      };
-    } else {
-      return function(y) {
-        return x + y;
-      };
-    }
+      if (count > 3 && count % 2 === 0) {
+        return errorMessage;
+      }
+
+      return firstArg + secondArg;
+    };
   };
 }
 
