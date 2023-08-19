@@ -6,21 +6,20 @@
  */
 
 function makeRobotAccountant() {
-  let counter = 0;
+  let operationsCounter = 0;
+  const START_VALUE = 3;
 
-  const errorMessage = 'Bzzz... Error!';
+  const ERROR_MESSAGE = 'Bzzz... Error!';
 
   return (num1) => {
-    counter++;
+    operationsCounter++;
 
-    const isMoreThen3 = counter > 3;
-    const isOdd = counter % 2 === 0;
+    const isBigger = operationsCounter > START_VALUE;
+    const isOdd = operationsCounter % 2 === 0;
 
-    const messageOrNum = isMoreThen3 && isOdd
-      ? message => errorMessage
+    return isBigger && isOdd
+      ? () => ERROR_MESSAGE
       : num2 => num1 + num2;
-
-    return messageOrNum;
   };
 }
 
