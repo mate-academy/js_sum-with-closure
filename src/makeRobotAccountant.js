@@ -4,21 +4,25 @@
  *
  * @return {function}
  */
+const MAX_ROWS = 3;
+const EVEN_VALUE = 0;
 
 function makeRobotAccountant() {
-  let count = 0;
+  let countRows = 0;
 
-  function getSum(x) {
-    return (y) => {
-      count++;
+  const getSum = (x) => (y) => {
+    countRows++;
 
-      if (count > 3 && count % 2 === 0) {
-        return 'Bzzz... Error!';
-      }
+    if (countRows <= MAX_ROWS) {
+      return x + y;
+    }
 
-      return a + b;
-    };
-  }
+    if (countRows % 2 === EVEN_VALUE) {
+      return 'Bzzz... Error!';
+    }
+
+    return x + y;
+  };
 
   return getSum;
 }
