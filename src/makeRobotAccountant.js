@@ -6,15 +6,16 @@
  */
 
 function makeRobotAccountant() {
-  const LIMIT = 3;
+  const USAGE_LIMIT = 3;
   let usageCount = 0;
+  const errorMassage = 'Bzzz... Error!';
 
-  return (a) => {
+  return (num1) => {
     usageCount++;
 
-    const isBroken = usageCount > LIMIT && usageCount % 2 === 0;
+    const isBroken = usageCount > USAGE_LIMIT && usageCount % 2 === 0;
 
-    return (b) => isBroken ? 'Bzzz... Error!' : a + b;
+    return (num2) => isBroken ? errorMassage : num1 + num2;
   };
 }
 
