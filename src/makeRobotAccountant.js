@@ -6,18 +6,22 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
-  let callCount = 0;
+  const workingCounts = 3;
+  const errorMessage = 'Bzzz... Error!';
+  let callsCount = 0;
 
   return (x) => {
     return (y) => {
-      callCount++;
+      callsCount++;
 
-      if (callCount <= 3 || callCount % 2 === 1) {
-        return x + y;
+      const even = callsCount % 2 === 0;
+      const broken = callsCount > workingCounts && even;
+
+      if (broken) {
+        return errorMessage;
       }
 
-      return 'Bzzz... Error!';
+      return x + y;
     };
   };
 }
