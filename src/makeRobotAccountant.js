@@ -14,9 +14,9 @@ function makeRobotAccountant() {
     return (secondNumber) => {
       if (countCall > 3 && countCall % 2 === 0) {
         return `Bzzz... Error!`;
-      } else {
-        return secondNumber + firstNumber;
       }
+
+      return secondNumber + firstNumber;
     };
   };
 }
