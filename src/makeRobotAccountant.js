@@ -7,17 +7,17 @@
 
 function makeRobotAccountant() {
   // write code here
-  let counter = 0;
+  let callsCounter = 0;
 
-  return function getSum(a) {
-    return function inner(b) {
-      counter++;
+  return (a) => {
+    return (b) => {
+      callsCounter++;
 
-      if (counter % 2 === 0 && counter > 3) {
-        return 'Bzzz... Error!';
-      } else {
+      if (callsCounter < 3 || callsCounter % 2 !== 0) {
         return a + b;
       }
+
+      return 'Bzzz... Error!';
     };
   };
 }
