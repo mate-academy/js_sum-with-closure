@@ -17,7 +17,9 @@ function makeRobotAccountant() {
         return error;
       }
 
-      return a + b;
+      const sum = a + b;
+
+      return sum;
     };
   };
 }
