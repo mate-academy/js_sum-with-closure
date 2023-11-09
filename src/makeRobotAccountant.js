@@ -7,6 +7,7 @@
 
 function makeRobotAccountant() {
   // write code here
+  // random comment cuz i forgot to switch branch and need to make changes :P
   let counter = 0;
 
   function getSum(a) {
