@@ -10,15 +10,13 @@ function makeRobotAccountant() {
 
   return function(x) {
     return function(y) {
-      const summ = x + y;
-
       countCalls++;
 
       if (countCalls > 3 && countCalls % 2 === 0) {
         return 'Bzzz... Error!';
       }
 
-      return summ;
+      return x + y;
     };
   };
 }
