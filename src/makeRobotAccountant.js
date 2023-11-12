@@ -6,7 +6,6 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
   let counter = 0;
 
   function getSum(number1) {
