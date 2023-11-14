@@ -7,6 +7,7 @@
 
 function makeRobotAccountant() {
   // write code here
+  
 }
 
 module.exports = makeRobotAccountant;
