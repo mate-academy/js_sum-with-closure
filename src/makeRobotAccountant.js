@@ -10,23 +10,16 @@ function makeRobotAccountant() {
 
   return function getSum(num1) {
     return function(num2) {
-      {
-        const first = num1;
+      counter++;
 
-        const second = num2;
-
-        counter++;
-
-        if (counter % 2 === 0 && counter > 3) {
-          return 'Bzzz... Error!';
-        }
-
-        return first + second;
+      if (counter % 2 === 0 && counter > 3) {
+        return 'Bzzz... Error!';
       }
+
+      return num1 + num2;
     };
   };
 }
 
 module.exports = makeRobotAccountant;
 
-// V2
