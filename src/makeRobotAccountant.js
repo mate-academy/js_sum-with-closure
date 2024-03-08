@@ -17,11 +17,11 @@ function makeRobotAccountant() {
 
         return sum;
       };
-    } else {
-      return function(b) {
-        return 'Bzzz... Error!';
-      };
     }
+
+    return function(b) {
+      return 'Bzzz... Error!';
+    };
   }
 
   return getSum;
