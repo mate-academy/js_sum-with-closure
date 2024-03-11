@@ -14,9 +14,9 @@ function makeRobotAccountant() {
 
       if (calls <= 3 || calls % 2 !== 0) {
         return x + y;
-      } else {
-        return 'Bzzz... Error!';
       }
+
+      return 'Bzzz... Error!';
     };
   };
 
