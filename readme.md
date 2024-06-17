@@ -5,6 +5,7 @@ Reproduce the behavior of our robots. Create a function `makeRobotAccountant`, t
 The first 3 calls to this feature work fine. Then all even calls return the string `Bzzz... Error!`, And odd calls the correct value.
 
 Example:
+
 ```
 const getSum = makeRobotAccountant();
 getSum(5)(6) === 11;
