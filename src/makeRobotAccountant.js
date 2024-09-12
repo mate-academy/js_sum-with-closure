@@ -6,7 +6,20 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let errorThrough = 0;
+
+  return function(a) {
+    return function(b) {
+      if (errorThrough === 3) {
+        errorThrough--;
+
+        return 'Bzzz... Error!';
+      }
+      errorThrough++;
+
+      return a + b;
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
