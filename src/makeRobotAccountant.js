@@ -6,7 +6,21 @@
  */
 
 function makeRobotAccountant() {
-  // write code here
+  let callCounter = 0;
+
+  return function(number1) {
+    return function(number2) {
+      if (callCounter < 3) {
+        callCounter++;
+
+        return number1 + number2;
+      } else {
+        callCounter--;
+
+        return 'Bzzz... Error!';
+      }
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
