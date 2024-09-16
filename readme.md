@@ -16,7 +16,3 @@ getSum(55)(17) === 'Bzzz... Error!';
 getSum(5)(17) === 22;
 getSum(1)(1) === 'Bzzz... Error!';
 ```
-
-**Read the guideline before start**
-
-[Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
