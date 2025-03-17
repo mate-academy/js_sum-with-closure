@@ -8,8 +8,8 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  return function(num1) {
-    return function(num2) {
+  return (num1) => {
+    return (num2) => {
       callCount++;
 
       if (callCount >= 4 && callCount % 2 === 0) {
