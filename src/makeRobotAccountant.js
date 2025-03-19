@@ -6,17 +6,17 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let callCount = 0;
 
-  return function(a) {
-    return function(b) {
-      count++;
+  return function(num1) {
+    return function(num2) {
+      callCount++;
 
-      if (count <= 3 || count % 2 === 1) {
-        return a + b;
-      } else {
+      if (callCount >= 4 && callCount % 2 === 0) {
         return 'Bzzz... Error!';
       }
+
+      return num1 + num2;
     };
   };
 }
