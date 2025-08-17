@@ -1,12 +1,19 @@
 'use strict';
 
-/**
- *
- * @return {function}
- */
-
 function makeRobotAccountant() {
-  // write code here
+  let count = 0;
+
+  return function(a) {
+    return function(b) {
+      count++;
+
+      if (count <= 3 || count % 2 === 1) {
+        return a + b;
+      } else {
+        return 'Bzzz.... Error!';
+      }
+    };
+  };
 }
 
 module.exports = makeRobotAccountant;
