@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  *
@@ -8,18 +8,18 @@
 function makeRobotAccountant() {
   let callNumber = 0;
 
-  return function getSum(firstNumber) {
+  return firstNumber => {
     callNumber += 1;
     const currentCall = callNumber;
 
-    return function add(secondNumber) {
+    return secondNumber => {
       const sum = firstNumber + secondNumber;
 
-      if (currentCall <= 3) {
-        return sum;
+      if (currentCall > 3 && currentCall % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
-      return currentCall % 2 === 0 ? 'Bzzz... Error!' : sum;
+      return sum;
     };
   };
 }
