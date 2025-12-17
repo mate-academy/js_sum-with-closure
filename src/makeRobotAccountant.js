@@ -8,15 +8,16 @@
 function makeRobotAccountant() {
   let callNumber = 0;
 
-  return firstNumber => {
+  return (firstNumber) => {
     callNumber += 1;
+
     const currentCall = callNumber;
 
-    return secondNumber => {
+    return (secondNumber) => {
       const sum = firstNumber + secondNumber;
 
       if (currentCall > 3 && currentCall % 2 === 0) {
-        return 'Bzzz... Error!';
+        return "Bzzz... Error!";
       }
 
       return sum;
