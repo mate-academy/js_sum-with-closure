@@ -6,25 +6,27 @@
  */
 
 function makeRobotAccountant() {
-  let count = 0;
+  let callCount = 0;
 
   function getSum(a) {
     return function(b) {
-      count += 1;
+      callCount++;
 
-      if (count <= 3) {
+      if (callCount <= 3) {
         return a + b;
       }
 
-      if (count % 2 === 0) {
-        return `Bzzz... Error!`;
+      if (callCount % 2 === 0) {
+        return 'Bzzz... Error!';
       }
 
       return a + b;
     };
-  };
+  }
 
-  return getSum;
+  return function(a) {
+    return getSum(a);
+  };
 }
 
 module.exports = makeRobotAccountant;
