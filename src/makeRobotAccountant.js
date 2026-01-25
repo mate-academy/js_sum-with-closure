@@ -6,23 +6,20 @@
  */
 
 function makeRobotAccountant() {
-  let countsOfCalls = 0;
+let countOfCalls = 0;
 
-  return function(a) {
-    return function(b) {
-      countsOfCalls++
+return function(a) {
+  return function(b) {
+   countOfCalls++
 
-      if (countsOfCalls <= 3) {
-        return a + b;
-      }
+   if(countOfCalls > 3 && countOfCalls % 2 === 0) {
+    return 'Bzz... Error!'
+   }
 
-      if (countsOfCalls > 3 && countsOfCalls % 2 === 0) {
-        return 'Bzz... Error!';
-      } else {
-        return a + b;
-      }
-    }
+   return a + b;
   }
+}
+
 }
 
 module.exports = makeRobotAccountant;
