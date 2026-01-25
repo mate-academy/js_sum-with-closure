@@ -13,7 +13,7 @@ return function(a) {
    countOfCalls++
 
    if(countOfCalls > 3 && countOfCalls % 2 === 0) {
-    return 'Bzz... Error!'
+    return 'Bzzz... Error!'
    }
 
    return a + b;
