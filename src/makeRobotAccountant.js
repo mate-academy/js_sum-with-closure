@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  *
@@ -8,9 +8,10 @@
 function makeRobotAccountant() {
   // write code here
   let count = 0;
-  const errorMessage = "Bzzz... Error!";
-  return function (a) {
-    return function (b) {
+  const errorMessage = 'Bzzz... Error!';
+
+  return function(a) {
+    return function(b) {
       count++;
 
       const warmUp = count <= 3;
@@ -19,9 +20,11 @@ function makeRobotAccountant() {
       if (warmUp) {
         return a + b;
       }
+
       if (isError) {
         return errorMessage;
       }
+
       return a + b;
     };
   };
