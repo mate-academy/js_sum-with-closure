@@ -7,8 +7,8 @@
 function makeRobotAccountant() {
   let callCount = 0;
 
-  return function getSum(firstNumber) {
-    return function add(secondNumber) {
+  return function(firstNumber) {
+    return function(secondNumber) {
       callCount++;
 
       if (callCount > 3 && callCount % 2 === 0) {
