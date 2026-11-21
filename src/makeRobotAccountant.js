@@ -19,5 +19,4 @@ function makeRobotAccountant() {
     };
   };
 }
-
 module.exports = makeRobotAccountant;
