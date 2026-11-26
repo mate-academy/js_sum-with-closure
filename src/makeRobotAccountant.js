@@ -5,16 +5,19 @@
  * @return {function}
  */
 
-function makeRobotAccountant(num1) {
+function makeRobotAccountant() {
   // write code here
   let count = 0;
 
-  return (num2) => {
-    count++;
+  return (num1) => {
+    return (num2) => {
+      count++;
 
-    return (count % 2 === 1 || count === 2)
-      ? num1 + num2
-      : 'Bzzz... Error!';
+      return (count % 2 === 1 || count === 2)
+        ? num1 + num2
+        : 'Bzzz... Error!';
+    }
+
   };
 }
 
